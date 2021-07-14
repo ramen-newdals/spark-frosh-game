@@ -1,10 +1,28 @@
 import './App.css';
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
+import { 
+  Header, 
+  Footer, 
+  LandingPage, 
+  StoryPage, 
+  EndingPage, 
+  PageNotFound
+} from "./index.js";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-        Hello world.
-    </div>
+      <Router>
+        <Header />
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/adventure" component={StoryPage} />
+            <Route exact path="/end" component={EndingPage} />
+            <Route component={PageNotFound} />
+          </Switch>
+        </div>
+        <Footer />
+      </Router>
   );
 }
 
