@@ -1,9 +1,11 @@
 import React from "react";
 
-const StoryPage = () => {
+const StoryPage = (props) => {
   return (
     <>
-    <p>Put a story card here!</p>
+      <div className='card'>
+        <p>This is a story card </p>
+      </div>
     </>
   );
 };
