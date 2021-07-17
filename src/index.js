@@ -16,6 +16,7 @@ import LandingPage from "./pages/LandingPage";
 import PageNotFound from "./pages/PageNotFound";
 import StoryPage from "./pages/StoryPage";
 
+import StoryFrame from "./backend/StoryFrame";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -33,6 +34,7 @@ export {
   Header,
   Image,
   StoryChoice,
-  StoryPrompt
+  StoryPrompt,
+  StoryFrame
 };
 

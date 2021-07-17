@@ -1,8 +1,10 @@
 import React from "react";
 
-const StoryChoice = () => {
+const StoryChoice = ({storyChoice, renderNewStory, choiceIdx}) => {
   return (
-    <p>This is a story choice. Choose wisely.</p>
+    <button onClick={() => renderNewStory(choiceIdx)}>
+      {storyChoice}
+    </button>
   );
 };
 
