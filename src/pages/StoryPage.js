@@ -40,8 +40,8 @@ const StoryPage = () => {
         setStoryText("you wake up on the floor a few seconds later. now what to do...");
         break;
       case 2:
-        setStoryOutcome("your friend jerks their sandwich away and glares at you. you still feel hungry.");
-        setStoryText("now what to do...");
+        setStoryOutcome("your friend jerks their sandwich away and glares at you.");
+        setStoryText("you still feel hungry...");
         break;
     }
 
