@@ -4,7 +4,7 @@ const StoryChoice = ({storyChoice, renderNewStory, choiceIdx}) => {
   return (
     <button 
       onClick={() => renderNewStory(choiceIdx)}
-        class="button is-dark">
+        className="button is-dark m-3">
       {storyChoice}
     </button>
   );

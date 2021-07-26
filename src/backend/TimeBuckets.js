@@ -1,6 +1,13 @@
 export const TimeBucket = {
-  FROSH_WEEK: 'Frosh Week',
-  CLUB_FAIR: 'Club Fair',
-  HALLOWEEN: 'Halloween',
-  FALL_MIDTERMS: 'Fall Midterms',
+  'START': 0,
+  'FROSH_WEEK': 1,
+  'CLUB_FAIR': 2,
+  'HALLOWEEN': 3,
+  'FALL_MIDTERMS': 'Fall Midterms',
+}
+
+
+export const GetNextTimebucket = (currentTimebucket) =>{
+  return TimeBucket.FROSH_WEEK
+  //return TimeBucket{currentTimebucket+1}
 }
