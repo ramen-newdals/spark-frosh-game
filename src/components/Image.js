@@ -1,9 +1,14 @@
 import React from "react";
+import tempImage from "../images/broken-image.png";
 
 const Image = (props) => {
+
   return (
-    // <p>Formatting images is easier if we put in a React component, like this one.</p>
-    <img src={props.src} alt='random'></img>
+    <div class="columns is-centered">
+      <div class="column is-one-quarter">
+        <img class="image" src={tempImage}/>
+      </div>
+    </div>
   );
 };
 

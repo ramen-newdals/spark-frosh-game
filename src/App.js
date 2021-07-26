@@ -6,7 +6,6 @@ import {
   StoryPage
 } from "./index.js";
 
-
 const App = () => {
   return (
     <>

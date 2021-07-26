@@ -2,7 +2,9 @@ import React from "react";
 
 const StoryChoice = ({storyChoice, renderNewStory, choiceIdx}) => {
   return (
-    <button onClick={() => renderNewStory(choiceIdx)}>
+    <button 
+      onClick={() => renderNewStory(choiceIdx)}
+        class="button is-dark">
       {storyChoice}
     </button>
   );

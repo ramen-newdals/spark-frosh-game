@@ -1,5 +1,8 @@
-import React, {useEffect, useState} from "react";
-import { Image, StoryChoice, StoryPrompt, StoryFrame } from "../index.js";
+import React, {useEffect, useState, useRef} from "react";
+import { Image, StoryChoice, StoryHistory, StoryPrompt, StoryFrame } from "../index.js";
+function format () {
+  return Array.prototype.slice.call(arguments).join(' ')
+}
 
 const StoryPage = () => {
 
@@ -7,89 +10,90 @@ const StoryPage = () => {
   const [pictureLink, setPictureLink] = useState("");
   const [storyText, setStoryText] = useState('you are hungry, what do you do');
   const [storyChoices, setStoryChoices] = useState(['eat food', 'starve', 'take a bite of your friend\'s food']);
+  const [storyOutcomes, setStoryOutcomes] = useState(['you feel satiated.', 'you faint.', 'your friend jerks their sandwich away and glares at you.']);
   const [storyOutcome, setStoryOutcome] = useState("");
+  const [storyHistory, setStoryHistory] = useState(['']);
 
   const [showPrompt, setShowPrompt] = useState(true);
-  const [showOutcome, setShowOutcome] = useState(true);
   const [showChoices, setShowChoices] = useState(true);
 
-  const option0 = 0
-  const option1 = 1
-  const option2 = 2
-
+  const storyTextBox = document.getElementById("storyTextBox");
+  const firstUpdate = useRef(true);
+   
+  //scrolls to the bottom of the story text box when new text gets added
   useEffect(() => {
-  }, [storyText]);
+    if (firstUpdate.current) { 
+      //useEffect automatically runs on first render (aka before anything's on the screen)
+      //this prevents the scrolling to cause an error during first render
+      firstUpdate.current = false;
+      return;
+    }
 
-  //TODO call updateStoryChoice() when it's implemented
+    storyTextBox.scrollTop = storyTextBox.scrollHeight - storyTextBox.clientHeight
+  }, [storyText]); //triggers when storyText changes
+
   function renderNewStory (choiceIdx) {
+
+    //TODO uncomment these lines when the backend function is complete
     //newStory = updateStoryChoice(choiceIdx);
     
-
     // setPictureLink(newStory.pictureLink);
     // setStoryText(newStory.storyText);
     // setStoryChoices(newStory.storyChoices);
 
-    //TODO: delete this switch case. only for demo purposes
+    //clear the screen briefly before showing outcome
+    // setShowOutcome(false)
+    setShowChoices(false);
+    setShowPrompt(false);
+
+    //show outcome of your action and append it to the rest of the story
+    //FIXME "storyOutcomes[choiceIdx], storyText" causes a race condition within
+    //setState. need to add both items in the correct order.
+    setStoryHistory([...storyHistory, storyOutcomes[choiceIdx], storyText]);
+
+    //TODO: delete this switch case. hardcoded for demo purposes
     switch(choiceIdx) {
       case 0: 
-        setStoryOutcome("you feel satiated.");
+        setStoryOutcome(storyOutcomes[0]);
         setStoryText("a few hours pass and you get hungry again...");
         break;
       case 1:
-        setStoryOutcome("you faint.");
+        setStoryOutcome(storyOutcomes[1]);
         setStoryText("you wake up on the floor a few seconds later. now what to do...");
         break;
       case 2:
-        setStoryOutcome("your friend jerks their sandwich away and glares at you.");
+        setStoryOutcome(storyOutcomes[2]);
         setStoryText("you still feel hungry...");
         break;
     }
 
-    //clear the screen briefly before showing outcome
-    setShowOutcome(false)
-    setShowPrompt(false);
-    setShowChoices(false);
-
-    //show outcome of your action
-    setTimeout(() => {
-      setShowOutcome(true);
-    }, 100)
-    
     //show the next prompt and choices
     setTimeout(() => {
       setShowPrompt(true);
+    }, 1000);
+
+    setTimeout(() => {
       setShowChoices(true);
-    }, 1000)
+    }, 1000);
   }
 
   return (
-    <>
-      <div className='card'>
+      <div class='column is-vcentered is-flex-direction-column is-fullheight-100vh'>
+        <div class="story-text-box" id="storyTextBox">
+            {/* <StoryHistory history={storyHistory} /> */}
+            <StoryPrompt storyText={storyOutcome} />
+            <StoryPrompt storyText={storyText} />
+        </div>
         <Image imgLink={pictureLink}/>
-        { showOutcome ? <StoryPrompt storyText={storyOutcome} /> : null}
-        { showPrompt ? <StoryPrompt storyText={storyText}/> : null}
         { showChoices ? 
-        <>
-        <StoryChoice 
-          choiceIdx={option0} 
-          storyChoice={storyChoices[option0]} 
-          renderNewStory={renderNewStory}
-        />
-        <StoryChoice 
-          choiceIdx={option1} 
-          storyChoice={storyChoices[option1]} 
-          renderNewStory={renderNewStory}
-        />
-        <StoryChoice 
-          choiceIdx={option2} 
-          storyChoice={storyChoices[option2]} 
-          renderNewStory={renderNewStory}
-        />
-        </>
+         storyChoices.map((text, idx) =>  <StoryChoice 
+         choiceIdx={idx} 
+         storyChoice={text}
+         renderNewStory={renderNewStory}
+       />)
         : null }
         <p style={{fontSize:10}}>(disclaimer: this is a dummy story that we will delete after the database has real stories in it)</p>
       </div>
-    </>
   );
 };
 

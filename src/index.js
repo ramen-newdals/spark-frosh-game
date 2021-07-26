@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Image from "./components/Image";
 import StoryChoice from "./components/StoryChoice";
+import StoryHistory from "./components/StoryHistory";
 import StoryPrompt from "./components/StoryPrompt";
 
 import EndingPage from "./pages/EndingPage";
@@ -34,6 +35,7 @@ export {
   Header,
   Image,
   StoryChoice,
+  StoryHistory,
   StoryPrompt,
   StoryFrame
 };
