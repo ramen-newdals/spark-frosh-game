@@ -5,13 +5,15 @@ import App from './App';
 
 //import all your components here to easily 
 //reuse your components anywhere in the project
+
+//components
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Image from "./components/Image";
 import StoryChoice from "./components/StoryChoice";
-import StoryHistory from "./components/StoryHistory";
 import StoryPrompt from "./components/StoryPrompt";
 
+//pages
 import EndingPage from "./pages/EndingPage";
 import LandingPage from "./pages/LandingPage";
 import PageNotFound from "./pages/PageNotFound";
@@ -35,7 +37,6 @@ export {
   Header,
   Image,
   StoryChoice,
-  StoryHistory,
   StoryPrompt,
   StoryFrame
 };

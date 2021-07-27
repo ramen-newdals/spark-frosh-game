@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from "react";
 import { RequestFirstStoryFrame, RequestNextStoryFrame } from "../backend/StoryController.js";
-import { Image, StoryChoice, StoryHistory, StoryPrompt, StoryFrame } from "../index.js";
+import { Image, StoryChoice, StoryPrompt } from "../index.js";
 function format () {
   return Array.prototype.slice.call(arguments).join(' ')
 }
@@ -9,11 +9,10 @@ const StoryPage = () => {
 
   //TODO replace dummy values with the initial story text
   const [pictureLink, setPictureLink] = useState("");
-  const [storyText, setStoryText] = useState('you are hungry, what do you do');
-  const [storyChoices, setStoryChoices] = useState(['eat food', 'starve', 'take a bite of your friend\'s food']);
-  const [storyOutcomes, setStoryOutcomes] = useState(['you feel satiated.', 'you faint.', 'your friend jerks their sandwich away and glares at you.']);
+  const [storyText, setStoryText] = useState("");
+  const [storyChoices, setStoryChoices] = useState([]);
+  const [storyOutcomes, setStoryOutcomes] = useState([]);
   const [storyOutcome, setStoryOutcome] = useState("");
-  const [storyHistory, setStoryHistory] = useState(['']);
 
   const [showPrompt, setShowPrompt] = useState(true);
   const [showChoices, setShowChoices] = useState(true);
@@ -45,40 +44,8 @@ const StoryPage = () => {
 
   function renderNewStory (choiceIdx) {
 
-    //TODO uncomment these lines when the backend function is complete
-    //newStory = updateStoryChoice(choiceIdx);
-    
-    // setPictureLink(newStory.pictureLink);
-    // setStoryText(newStory.storyText);
-    // setStoryChoices(newStory.storyChoices);
-
-    //clear the screen briefly before showing outcome
-    // setShowOutcome(false)
     setShowChoices(false);
     setShowPrompt(false);
-
-    //show outcome of your action and append it to the rest of the story
-    //FIXME "storyOutcomes[choiceIdx], storyText" causes a race condition within
-    //setState. need to add both items in the correct order.
-    setStoryHistory([...storyHistory, storyOutcomes[choiceIdx], storyText]);
-
-    //TODO: delete this switch case. hardcoded for demo purposes
-    
-    // switch(choiceIdx) {
-    //   case 0: 
-    //     setStoryOutcome(storyOutcomes[0]);
-    //     setStoryText("a few hours pass and you get hungry again...");
-    //     break;
-    //   case 1:
-    //     setStoryOutcome(storyOutcomes[1]);
-    //     setStoryText("you wake up on the floor a few seconds later. now what to do...");
-    //     break;
-    //   case 2:
-    //     setStoryOutcome(storyOutcomes[2]);
-    //     setStoryText("you still feel hungry...");
-    //     break;
-    // }
-
     setStoryOutcome(storyOutcomes[choiceIdx])
 
     //show the next prompt and choices
@@ -101,7 +68,6 @@ const StoryPage = () => {
   return (
       <div class='column is-vcentered is-flex-direction-column is-fullheight-100vh'>
         <div class="story-text-box" id="storyTextBox">
-            {/* <StoryHistory history={storyHistory} /> */}
             <StoryPrompt storyText={storyOutcome} />
             <br></br>
             <StoryPrompt storyText={storyText} />
@@ -114,7 +80,6 @@ const StoryPage = () => {
          renderNewStory={renderNewStory}
        />)
         : null }
-        <p style={{fontSize:10}}>(disclaimer: this is a dummy story that we will delete after the database has real stories in it)</p>
       </div>
   );
 };
