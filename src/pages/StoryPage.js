@@ -66,13 +66,13 @@ const StoryPage = () => {
   }
 
   return (
-      <div class='column is-vcentered is-flex-direction-column is-fullheight-100vh'>
-        <div class="story-text-box" id="storyTextBox">
+      <div class='columns is-centered has-text-centered is-fullheight-100vh'>
+        <div class="column m-5 is-half block is-fullheight" id="storyTextBox">
             <StoryPrompt storyText={storyOutcome} />
             <br></br>
             <StoryPrompt storyText={storyText} />
-        </div>
         <Image imgLink={pictureLink}/>
+        <ul>
         { showChoices ? 
          storyChoices.map((text, idx) =>  <StoryChoice 
          choiceIdx={idx} 
@@ -80,6 +80,8 @@ const StoryPage = () => {
          renderNewStory={renderNewStory}
        />)
         : null }
+        </ul>
+        </div>
       </div>
   );
 };
