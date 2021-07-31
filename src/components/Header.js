@@ -1,21 +1,16 @@
 import React from "react";
-import sparkLogo from "../images/SparkLogoWhiteText.png";
-/* TODO
-Make the header bigger so you can read the spark logo
-*/
+import {sparkLogoWhiteText, Image}  from "../index.js";
+
 const Header = () => {
   return (
   <nav 
-      class="navbar is-dark has-shadow is-spaced"
-      height="0.2vh"
+      class="navbar is-purple has-shadow is-spaced"
       role="navigation" 
       aria-label="main navigation"
     >
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://spark.skule.ca/">
-      <img src={sparkLogo} alt="Spark Design Club"/>
+    <a class="navbar-brand" href="https://spark.skule.ca/">
+      <img src={sparkLogoWhiteText} alt="Spark Design Club"/>
     </a>
-  </div>
 </nav>
   );
 };

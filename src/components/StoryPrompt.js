@@ -2,7 +2,7 @@ import React from "react";
 
 const StoryPrompt = ({storyText}) => {
   return (
-    <p>{storyText}</p>
+    <p class="m-3">{storyText}</p>
   );
 };
 

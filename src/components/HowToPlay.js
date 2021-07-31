@@ -3,12 +3,23 @@ import React from "react";
 const HowToPlay = () => {
 
   const info = " \
-  Navigate your way through your first year of UofT Engineering in this \
-  casual text-based adventure game. Depending on your final score, \
-  you can earn a fish for your F!rosh Group in the F!rosh Fish Tank. The choice is yours!";
+  Choose a path through your first year of UofT Engineering. \
+  Depending on your choices, you might earn your F!rosh group \
+  a fish to display on the leaderboard. The choice is yours!";
 
   return (
-    <button class="button is-success" data-tooltip={info}>How to Play</button>
+    <div class="dropdown is-hoverable">
+      <div class="dropdown-trigger">
+      <button class="button is-warning is-light" aria-haspopup="true" aria-controls="dropdown-menu">How to Play</button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <p class="m-3">
+            {info}
+            </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
