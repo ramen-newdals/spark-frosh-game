@@ -10,13 +10,14 @@ import App from './App';
 import ContactInfo from './components/ContactInfo';
 import FishTankLink from "./components/FishTankLink";
 import Footer from "./components/Footer";
+import FroshGroupDropdown from './components/FroshGroupDropdown';
 import Header from "./components/Header";
 import HowToPlay from './components/HowToPlay';
 import Image from "./components/Image";
+import NameField from "./components/NameField";
 import StoryChoice from "./components/StoryChoice";
 import StoryPrompt from "./components/StoryPrompt";
 import StartButton from "./components/StartButton";
-import TextField from "./components/TextField";
 
 //pages
 import EndingPage from "./pages/EndingPage";
@@ -47,13 +48,14 @@ export {
   ContactInfo,
   FishTankLink,
   Footer,
+  FroshGroupDropdown,
   Header,
   HowToPlay,
   Image,
+  NameField,
   StartButton,
   StoryChoice,
   StoryPrompt,
-  TextField,
   StoryFrame,
   brokenImage,
   sparkLogoWhiteText,

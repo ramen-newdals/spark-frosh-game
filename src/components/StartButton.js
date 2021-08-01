@@ -4,7 +4,7 @@ const StartButton = ({startGame}) => {
   return (
     <button 
         onClick={() => startGame()}
-        className="button is-success m-3 is-large">
+        className="button is-success m-5 is-large">
       Let's Go
     </button>
   );

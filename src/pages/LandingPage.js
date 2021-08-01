@@ -1,34 +1,28 @@
 import React from "react";
-import { StartButton, sparkLogoBlackText, Image, TextField, FishTankLink, HowToPlay } from "../index.js";
+import { StartButton, sparkLogoBlackText, Image, NameField, FroshGroupDropdown, FishTankLink, HowToPlay } from "../index.js";
 
 const LandingPage = ({ startGame, setName, setFroshGroup }) => {
 
   return (
-    <div class='columns is-fullheight-100vh'>
-      <aside class="column is-narrow menu mr-6">
-        <ul class="menu-list">
-          <li class="m-5">
-            <FishTankLink />
-          </li>
-          <li class="m-5">
-            <HowToPlay />
-          </li>
-        </ul>
-      </aside>
-      <div class="column m-3 ml-6 is-one-third block has-text-centered" id="storyTextBox">
-        <Image class="column m-5 is-one-third is-2by1" imgLink={sparkLogoBlackText} />
+    <div class='columns is-mobile'>
+      <div class="column is-one-quarter menu m-5">
+        <HowToPlay />
+      </div>
+      <div class="column m-5 is-one-third block has-text-centered" id="storyTextBox">
         <h1 class="is-size-1 has-text-black is-spark-font">F!rosh Simulator</h1>
         <h4 class="subtitle">Choose your own adventure. Earn a F!rosh fish.</h4>
-        <TextField
-          label="Hey there, what's your name?"
-          placeholder="Your Name"
+        <NameField
           setValue={setName} />
-        <TextField
-          label="What's your F!rosh group?"
-          placeholder="(eg Alpha, Beta, Gamma, etc)" 
-          setValue={setFroshGroup}/>
+        <FroshGroupDropdown
+          setValue={setFroshGroup} />
+        <br/> {/* FIXME use styling to stack elements instead of using br */}
         <StartButton startGame={startGame} />
+        <br/>
+        <FishTankLink />
         <p class="is-size-7 m-5">Warning: Story progress may not save if you quit before finishing your adventure</p>
+      </div>
+      <div class="column m-5 is-one-quarter">
+        <Image class="is-2by1" imgLink={sparkLogoBlackText} />
       </div>
     </div>
   );

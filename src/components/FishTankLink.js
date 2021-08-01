@@ -7,28 +7,27 @@ import { brokenImage, Image } from "../index.js";
 const FishTankLink = () => {
 
   return (
-    <div class="dropdown is-hoverable">
-      <div class="dropdown-trigger">
-        <a
-          class="button is-warning is-light"
-          href="https://master.d3fqojc7hrzjsu.amplifyapp.com/"
-          aria-haspopup="true"
-          aria-controls="dropdown-menu">
-          F!rosh Fish Leaderboard
-        </a>
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-          <p class="m-3">
-            {/* <Image class="is-64x64" imgLink={brokenImage}/> */}
-            ...
-            (image preview goes here)
-            ...
-          </p>
+    <div class="card">
+      <a href="https://master.d3fqojc7hrzjsu.amplifyapp.com/">
+      <div class="card-header">
+        <div class="card-header-title menu-label">
+            Check out the F!rosh Fish Leaderboard!
         </div>
       </div>
+      <div class="card-content">
+      <br/>
+        <p>
+          {/* <Image class="is-64x64" imgLink={brokenImage}/> */}
+          ...
+          (image preview goes here)
+          ...
+        </p>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+      </a>
     </div>
-
   );
 };
 

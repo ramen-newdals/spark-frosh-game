@@ -8,16 +8,16 @@ const HowToPlay = () => {
   a fish to display on the leaderboard. The choice is yours!";
 
   return (
-    <div class="dropdown is-hoverable">
-      <div class="dropdown-trigger">
-      <button class="button is-warning is-light" aria-haspopup="true" aria-controls="dropdown-menu">How to Play</button>
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-          <p class="m-3 has-text-centered">
-            {info}
-            </p>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title menu-label is-light is-warning">
+          How to Play
         </div>
+      </div>
+      <div class="card-content">
+        <p class="m-3">
+          {info}
+        </p>
       </div>
     </div>
   );
