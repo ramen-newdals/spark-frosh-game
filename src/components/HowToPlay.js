@@ -14,7 +14,7 @@ const HowToPlay = () => {
       </div>
       <div class="dropdown-menu" id="dropdown-menu" role="menu">
         <div class="dropdown-content">
-          <p class="m-3">
+          <p class="m-3 has-text-centered">
             {info}
             </p>
         </div>

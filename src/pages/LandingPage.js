@@ -5,7 +5,7 @@ const LandingPage = ({ startGame }) => {
 
   return (
     <div class='columns is-fullheight-100vh'>
-      <aside class="column is-narrow menu">
+      <aside class="column is-narrow menu mr-6">
         <ul class="menu-list">
           <li class="m-5">
             <FishTankLink />
@@ -15,7 +15,7 @@ const LandingPage = ({ startGame }) => {
           </li>
         </ul>
       </aside>
-      <div class="column m-4 is-one-third block has-text-centered" id="storyTextBox">
+      <div class="column m-3 ml-6 is-one-third block has-text-centered" id="storyTextBox">
         <Image class="column m-5 is-one-third is-2by1" imgLink={sparkLogoBlackText} />
         <h1 class="is-size-1 has-text-black is-spark-font">F!rosh Simulator</h1>
         <h4 class="subtitle">Choose your own adventure. Earn a F!rosh fish.</h4>
