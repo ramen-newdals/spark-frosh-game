@@ -1,5 +1,5 @@
 import React from "react";
-import {sparkLogoWhiteText, Image}  from "../index.js";
+import {sparkLogoWhiteText}  from "../index.js";
 
 const Header = () => {
   return (
@@ -11,6 +11,11 @@ const Header = () => {
     <a class="navbar-brand" href="https://spark.skule.ca/">
       <img src={sparkLogoWhiteText} alt="Spark Design Club"/>
     </a>
+    <div class="navbar-end">
+      <h1 class="is-size-1 has-text-white is-spark-font">
+        F!rosh Simulator
+      </h1>
+    </div>
 </nav>
   );
 };

@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/b5477b6215858c9a3770dbbc7906820f?family=Agency+Gothic+CT+Medium);
+
 .App {
   text-align: center;
 }
@@ -8,5 +10,9 @@
 
 .is-purple{
   background-color: #B19CD8;
+}
+
+.is-spark-font{
+  font-family: "Agency Gothic CT Medium";
 }
 
