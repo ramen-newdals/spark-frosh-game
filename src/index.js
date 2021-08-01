@@ -15,6 +15,7 @@ import Header from "./components/Header";
 import HowToPlay from './components/HowToPlay';
 import Image from "./components/Image";
 import NameField from "./components/NameField";
+import PlayAgainButton from './components/PlayAgainButton';
 import StoryChoice from "./components/StoryChoice";
 import StoryPrompt from "./components/StoryPrompt";
 import StartButton from "./components/StartButton";
@@ -53,6 +54,7 @@ export {
   HowToPlay,
   Image,
   NameField,
+  PlayAgainButton,
   StartButton,
   StoryChoice,
   StoryPrompt,

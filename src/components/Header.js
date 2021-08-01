@@ -1,7 +1,7 @@
 import React from "react";
 import {sparkLogoWhiteText}  from "../index.js";
 
-const Header = () => {
+const Header = ({endGame, restartGame}) => {
   return (
   <nav 
       class="navbar is-purple has-shadow is-spaced"
@@ -11,10 +11,11 @@ const Header = () => {
     <a class="navbar-brand" href="https://spark.skule.ca/">
       <img src={sparkLogoWhiteText} alt="Spark Design Club"/>
     </a>
+    <button class="button" onClick={() => endGame()}>Ending page (for debugging)</button>
     <div class="navbar-end">
-      <h1 class="is-size-1 has-text-white is-spark-font">
+        <a class="is-size-1 has-text-white is-spark-font" onClick={() => restartGame()}>
         F!rosh Simulator
-      </h1>
+        </a>
     </div>
 </nav>
   );
