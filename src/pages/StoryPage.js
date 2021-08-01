@@ -66,7 +66,7 @@ const StoryPage = () => {
   }
 
   return (
-      <div class='columns is-centered has-text-centered is-fullheight-100vh'>
+      <div class='columns is-centered has-text-centered'>
         <div class="column m-5 is-half block is-fullheight" id="storyTextBox">
             <StoryPrompt storyText={storyOutcome} />
             <br></br>

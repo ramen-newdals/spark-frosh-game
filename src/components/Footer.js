@@ -7,7 +7,7 @@ Fix the styling when you hover over the links
 const Footer = () => {
   return (
     <nav 
-      class="navbar is-purple"
+      class="footer navbar is-purple"
       role="navigation" 
     >
   <div class="navbar-brand">

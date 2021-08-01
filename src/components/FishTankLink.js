@@ -21,7 +21,9 @@ const FishTankLink = () => {
         <div class="dropdown-content">
           <p class="m-3">
             {/* <Image class="is-64x64" imgLink={brokenImage}/> */}
+            ...
             (image preview goes here)
+            ...
           </p>
         </div>
       </div>
