@@ -7,6 +7,7 @@ import App from './App';
 //reuse your components anywhere in the project
 
 //components
+import ContactInfo from './components/ContactInfo';
 import FishTankLink from "./components/FishTankLink";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -43,6 +44,7 @@ export {
   LandingPage,
   PageNotFound,
   StoryPage,
+  ContactInfo,
   FishTankLink,
   Footer,
   Header,

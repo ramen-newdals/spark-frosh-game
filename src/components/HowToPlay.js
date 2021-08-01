@@ -4,7 +4,7 @@ const HowToPlay = () => {
 
   const info = " \
   Choose a path through your first year of UofT Engineering. \
-  Depending on your choices, you might earn your F!rosh group \
+  Depending on your final score, you might earn your F!rosh group \
   a fish to display on the leaderboard. The choice is yours!";
 
   return (
