@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import {
@@ -25,9 +25,14 @@ const App = () => {
     <>
       <Header />
       <div>
-        {showLandingPage ? <LandingPage startGame={startGame} /> : null}
-        {showStoryPage ? <StoryPage /> : null}
-        {showEndingPage ? <EndingPage name={name} froshGroup={froshGroup}/> : null}
+        {showLandingPage ?
+          <LandingPage
+            startGame={startGame}
+            setName={setName}
+            setFroshGroup={setFroshGroup}
+          /> : null}
+        {showStoryPage ? <StoryPage name={name}/> : null}
+        {showEndingPage ? <EndingPage name={name} froshGroup={froshGroup} /> : null}
       </div>
       <Footer />
     </>

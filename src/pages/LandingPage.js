@@ -1,7 +1,7 @@
 import React from "react";
 import { StartButton, sparkLogoBlackText, Image, TextField, FishTankLink, HowToPlay } from "../index.js";
 
-const LandingPage = ({ startGame }) => {
+const LandingPage = ({ startGame, setName, setFroshGroup }) => {
 
   return (
     <div class='columns is-fullheight-100vh'>
@@ -21,10 +21,12 @@ const LandingPage = ({ startGame }) => {
         <h4 class="subtitle">Choose your own adventure. Earn a F!rosh fish.</h4>
         <TextField
           label="Hey there, what's your name?"
-          placeholder="Your Name" />
+          placeholder="Your Name"
+          setValue={setName} />
         <TextField
           label="What's your F!rosh group?"
-          placeholder="(eg Alpha, Beta, Gamma, etc)" />
+          placeholder="(eg Alpha, Beta, Gamma, etc)" 
+          setValue={setFroshGroup}/>
         <StartButton startGame={startGame} />
         <p class="is-size-7 m-5">Warning: Story progress may not save if you quit before finishing your adventure</p>
       </div>

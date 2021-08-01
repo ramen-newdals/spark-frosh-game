@@ -5,7 +5,7 @@ function format () {
   return Array.prototype.slice.call(arguments).join(' ')
 }
 
-const StoryPage = () => {
+const StoryPage = ({name}) => {
 
   //TODO replace dummy values with the initial story text
   const [pictureLink, setPictureLink] = useState("");
@@ -23,7 +23,7 @@ const StoryPage = () => {
   //initializer
   useEffect(()=>{
     let firstStoryFrame = RequestFirstStoryFrame()
-    setStoryText(firstStoryFrame.storyText)
+    setStoryText(firstStoryFrame.storyText+" Glad you're here, "+name+".")
     setStoryChoices(firstStoryFrame.storyChoices)
     setPictureLink(firstStoryFrame.pictureLink)
     setStoryOutcomes(firstStoryFrame.storyOutcomes)
