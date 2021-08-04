@@ -28,7 +28,7 @@ const FroshGroupDropdown = ({ setValue, value }) => {
   return (
     <>
     <p class="has-text-dark m-5">Select your F!rosh Group:</p>
-    <div class="select has-text-dark is-warning">
+    <div class="select has-text-dark">
       <select
         value={value}
         onInput={e => setValue(e.target.value)}>
