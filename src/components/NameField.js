@@ -4,9 +4,9 @@ const NameField = ({setValue, value}) => {
 
   return (
     <>
-      <p class="has-text-dark m-5">Hey there, what's your name?</p>
+      <p class="has-text-dark mt-6 m-4">Welcome! What's your name?</p>
       <input 
-        class="input m-2" 
+        class="input" 
         type="text" 
         placeholder="Enter your name"
         value={value}

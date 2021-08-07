@@ -5,7 +5,7 @@ const StartButton = ({startGame}) => {
     <button 
         onClick={() => startGame()}
         className="button is-warning m-5 is-large">
-      Let's Go
+      Let's Go!
     </button>
   );
 };

@@ -5,7 +5,7 @@ const StoryChoice = ({storyChoice, renderNewStory, choiceIdx}) => {
     <li>
     <button 
       onClick={() => renderNewStory(choiceIdx)}
-        className="button is-warning is-light m-1">
+        className="button is-warning m-1">
       {storyChoice}
     </button>
     </li>
