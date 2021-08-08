@@ -1,5 +1,5 @@
 import React from "react";
-import {sparkLogoWhiteText}  from "../index.js";
+import {sparkLogoSmall}  from "../index.js";
 
 const Header = ({endGame, restartGame}) => {
   return (
@@ -9,12 +9,12 @@ const Header = ({endGame, restartGame}) => {
       aria-label="main navigation"
     >
     <a class="navbar-brand" href="https://spark.skule.ca/">
-      <img src={sparkLogoWhiteText} alt="Spark Design Club"/>
+      <img src={sparkLogoSmall} alt="Spark Design Club"/>
     </a>
-    <button class="button" onClick={() => endGame()}>Ending page (for debugging)</button>
+    {/* <button class="button" onClick={() => endGame()}>Ending page (for debugging)</button> */}
     <div class="navbar-end">
-        <a class="is-size-1 has-text-white is-spark-font" onClick={() => restartGame()}>
-        F!rosh Simulator
+        <a class="is-size-2 has-text-white is-spark-font" onClick={() => restartGame()}>
+        Home
         </a>
     </div>
 </nav>

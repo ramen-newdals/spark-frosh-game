@@ -11,7 +11,7 @@ const FishTankLink = () => {
       <a href="https://master.d3fqojc7hrzjsu.amplifyapp.com/">
       <div class="card-header">
         <div class="card-header-title menu-label">
-            Check out the F!rosh Fish Leaderboard!
+            Check out the F!rosh Fish Leaderboard
         </div>
       </div>
       <div class="card-content">

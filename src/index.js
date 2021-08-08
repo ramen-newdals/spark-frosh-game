@@ -32,7 +32,7 @@ import StoryFrame from "./backend/StoryFrame";
 
 //images
 import brokenImage from "./images/broken-image.png";
-import sparkLogoWhiteText from "./images/SparkLogoWhiteText.png";
+import sparkLogoSmall from "./images/SparkLogoSmall.png";
 import sparkLogoBlackText from "./images/SparkLogoBlackText.png";
 
 ReactDOM.render(
@@ -62,7 +62,7 @@ export {
   Subscribe,
   StoryFrame,
   brokenImage,
-  sparkLogoWhiteText,
+  sparkLogoSmall,
   sparkLogoBlackText
 };
 
