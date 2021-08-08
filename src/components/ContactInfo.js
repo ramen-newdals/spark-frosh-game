@@ -7,7 +7,7 @@ const ContactInfo = () => {
         <p class="menu-label">
           Questions? Comments? Just want to say hi?
         </p>
-        <ul class="menu-list">
+        <ul class="menu-list is-size-7">
           <li><a href="mailto:spark@skule.ca">spark@skule.ca</a></li>
           <li><a href="https://www.google.ca/maps/place/University+of+Toronto+Engineering+Society/@43.6600145,-79.3970232,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34b883ceda27:0x5dcfd60a0830b2ea!8m2!3d43.6600106!4d-79.3948345">
             Engineering Society, B740 Sanford Fleming,

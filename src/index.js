@@ -19,6 +19,7 @@ import PlayAgainButton from './components/PlayAgainButton';
 import StoryChoice from "./components/StoryChoice";
 import StoryPrompt from "./components/StoryPrompt";
 import StartButton from "./components/StartButton";
+import Subscribe from './components/Subscribe';
 
 //pages
 import EndingPage from "./pages/EndingPage";
@@ -58,6 +59,7 @@ export {
   StartButton,
   StoryChoice,
   StoryPrompt,
+  Subscribe,
   StoryFrame,
   brokenImage,
   sparkLogoWhiteText,
