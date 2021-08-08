@@ -12,3 +12,7 @@
   font-family: "Agency Gothic CT Medium";
 }
 
+.is-100vh {
+    min-height: 100vh;
+}
+
