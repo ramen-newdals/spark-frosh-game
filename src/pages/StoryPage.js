@@ -7,7 +7,6 @@ function format () {
 
 const StoryPage = ({name}) => {
 
-  //TODO replace dummy values with the initial story text
   const [pictureLink, setPictureLink] = useState("");
   const [storyText, setStoryText] = useState("");
   const [storyChoices, setStoryChoices] = useState([]);
@@ -16,9 +15,6 @@ const StoryPage = ({name}) => {
 
   const [showPrompt, setShowPrompt] = useState(true);
   const [showChoices, setShowChoices] = useState(true);
-
-  const storyTextBox = document.getElementById("storyTextBox");
-  const firstUpdate = useRef(true);
   
   //initializer
   useEffect(()=>{
@@ -30,25 +26,13 @@ const StoryPage = ({name}) => {
     console.log('initialized')
   }, [])
 
-  //scrolls to the bottom of the story text box when new text gets added
-  useEffect(() => {
-    if (firstUpdate.current) { 
-      //useEffect automatically runs on first render (aka before anything's on the screen)
-      //this prevents the scrolling to cause an error during first render
-      firstUpdate.current = false;
-      return;
-    }
-
-    storyTextBox.scrollTop = storyTextBox.scrollHeight - storyTextBox.clientHeight
-  }, [storyText]); //triggers when storyText changes
-
   function renderNewStory (choiceIdx) {
 
     setShowChoices(false);
     setShowPrompt(false);
     setStoryOutcome(storyOutcomes[choiceIdx])
 
-    //show the next prompt and choices
+    // Show the next prompt and choices
     setTimeout(() => {
       setShowPrompt(true);
     }, 1000);
@@ -57,17 +41,21 @@ const StoryPage = ({name}) => {
       setShowChoices(true);
     }, 1000);
 
-    var nextStory = RequestNextStoryFrame(choiceIdx)
-    setStoryText(nextStory.storyText)
-    setStoryChoices(nextStory.storyChoices)
-    setPictureLink(nextStory.pictureLink)
-    setStoryOutcomes(nextStory.storyOutcomes)
+    var nextStory = RequestNextStoryFrame(choiceIdx);
+    setStoryText(nextStory.storyText);
+    setStoryChoices(nextStory.storyChoices);
+    setPictureLink(nextStory.pictureLink);
+    setStoryOutcomes(nextStory.storyOutcomes);
+
+    // Automatically scroll up to see outcome
+    // Won't scroll if outcome is already visible
+    window.scrollTo(0, 0);
 
   }
 
   return (
       <div class='columns is-centered has-text-centered is-100vh'>
-        <div class="column m-5 is-half block" id="storyTextBox">
+        <div class="column m-5 is-half block">
             <StoryPrompt storyText={storyOutcome} />
             <br></br>
             <StoryPrompt storyText={storyText} />

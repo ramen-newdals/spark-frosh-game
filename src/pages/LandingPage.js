@@ -4,7 +4,7 @@ import { StartButton, sparkLogoBlackText, Image, NameField, FroshGroupDropdown, 
 const LandingPage = ({ startGame, setName, setFroshGroup }) => {
 
   return (
-    <div class='columns is-mobile'>
+    <div class='columns is-desktop'>
       <div class="column is-one-quarter menu m-5">
         <HowToPlay />
       </div>

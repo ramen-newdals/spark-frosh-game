@@ -42,7 +42,7 @@ const App = () => {
   return (
     <>
       <Header restartGame={restartGame} endGame={endGame} />
-      <div class="is-mobile">
+      <div>
         {showLandingPage ?
           <LandingPage
             startGame={startGame}
