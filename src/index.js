@@ -8,7 +8,9 @@ import App from './App';
 
 //components
 import ContactInfo from './components/ContactInfo';
+import FishPreviewSliders from './components/FishPreviewSliders';
 import FishTankLink from "./components/FishTankLink";
+import FishResult from './components/FishResult';
 import Footer from "./components/Footer";
 import FroshGroupDropdown from './components/FroshGroupDropdown';
 import Header from "./components/Header";
@@ -34,6 +36,7 @@ import StoryFrame from "./backend/StoryFrame";
 import brokenImage from "./images/broken-image.png";
 import sparkLogoSmall from "./images/SparkLogoSmall.png";
 import sparkLogoBlackText from "./images/SparkLogoBlackText.png";
+import shark from "./images/demoShark.png";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -48,7 +51,9 @@ export {
   PageNotFound,
   StoryPage,
   ContactInfo,
+  FishPreviewSliders,
   FishTankLink,
+  FishResult,
   Footer,
   FroshGroupDropdown,
   Header,
@@ -62,6 +67,7 @@ export {
   Subscribe,
   StoryFrame,
   brokenImage,
+  shark,
   sparkLogoSmall,
   sparkLogoBlackText
 };
