@@ -2,11 +2,13 @@ import React from "react";
 
 const StoryChoice = ({storyChoice, renderNewStory, choiceIdx}) => {
   return (
+    <li>
     <button 
       onClick={() => renderNewStory(choiceIdx)}
-        className="button is-dark m-3">
+        className="button is-warning m-1">
       {storyChoice}
     </button>
+    </li>
   );
 };
 

@@ -4,11 +4,9 @@ import tempImage from "../images/broken-image.png";
 const Image = (props) => {
 
   return (
-    <div class="columns is-centered">
-      <div class="column is-one-quarter">
-        <img class="image" src={props.imgLink}/>
-      </div>
-    </div>
+    <figure class="is-inline-block has-text-centered">
+    <img class="m-4" src={props.imgLink}/>
+    </figure>
   );
 };
 

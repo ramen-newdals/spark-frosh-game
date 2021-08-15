@@ -1,21 +1,22 @@
 import React from "react";
-import sparkLogo from "../images/SparkLogoWhiteText.png";
-/* TODO
-Make the header bigger so you can read the spark logo
-*/
-const Header = () => {
+import {sparkLogoSmall}  from "../index.js";
+
+const Header = ({endGame, restartGame}) => {
   return (
   <nav 
-      class="navbar is-dark has-shadow is-spaced"
-      height="0.2vh"
+      class="navbar is-purple has-shadow is-spaced"
       role="navigation" 
       aria-label="main navigation"
     >
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://spark.skule.ca/">
-      <img src={sparkLogo} alt="Spark Design Club"/>
+    <a class="navbar-brand" href="https://spark.skule.ca/">
+      <img src={sparkLogoSmall} alt="Spark Design Club"/>
     </a>
-  </div>
+    <button class="button" onClick={() => endGame()}>Ending page (for debugging)</button>
+    <div class="navbar-end">
+        <a class="is-size-2 has-text-white is-spark-font" onClick={() => restartGame()}>
+        Home
+        </a>
+    </div>
 </nav>
   );
 };

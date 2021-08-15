@@ -1,24 +1,18 @@
+@import url(//db.onlinewebfonts.com/c/b5477b6215858c9a3770dbbc7906820f?family=Agency+Gothic+CT+Medium);
+
 .App {
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.is-purple{
+  background-color: #B19CD8;
 }
 
-.is-fullheight-100vh{
-  height:100vh;
+.is-spark-font{
+  font-family: "Agency Gothic CT Medium";
 }
 
-.story-text-box{
-  height: 15vh;
-  overflow:auto; 
+.is-100vh {
+    min-height: 100vh;
 }
 
