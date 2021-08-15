@@ -3,11 +3,10 @@ export const TimeBucket = {
   'FROSH_WEEK': 1,
   'CLUB_FAIR': 2,
   'HALLOWEEN': 3,
-  'FALL_MIDTERMS': 'Fall Midterms',
+  'FALL_MIDTERMS': 4,
 }
 
-
-export const GetNextTimebucket = (currentTimebucket) =>{
+export const GetNextTimebucket = (currentTimebucket) => {
   return TimeBucket.FROSH_WEEK
   //return TimeBucket{currentTimebucket+1}
 }

@@ -15,7 +15,7 @@ const StoryPage = () => {
   const [storyOutcome, setStoryOutcome] = useState("");
   const [storyHistory, setStoryHistory] = useState(['']);
 
-  const [showPrompt, setShowPrompt] = useState(true);
+  const [showPrompt,  setShowPrompt] = useState(true);
   const [showChoices, setShowChoices] = useState(true);
 
   const storyTextBox = document.getElementById("storyTextBox");

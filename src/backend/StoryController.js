@@ -39,6 +39,7 @@ export const RequestNextStoryFrame = (choiceIndex) => {
   //mutate vars
   var mutators = currentFrame.stateMutators[choiceIndex]; 
   AddUpdatePlayerStats(mutators)
+  console.dir(PlayerStats)
 
   //next story selector
   //TODO select random in timebucket, rather than in order
