@@ -18,18 +18,6 @@ const FishPreviewSliders = () => {
     const [dummyScore, setDummyScore] = useState(200);
     const dummyFishTypes = ["Grandpa Shark", "Grandma Shark", "Daddy Shark", "Mommy Shark", "Baby Shark"];
 
-    // Initialize score previews
-    // useEffect(()=>{
-    //     let scores = CalculatePlayerScore()
-    //     setAcademicPreview(scores.academic)
-    //     setHealthPreview(scores.health)
-    //     setSocialPreview(scores.social)
-    //     setExtracurricularsPreview(scores.ecr)
-    //     console.log("SCORES")   
-    //     console.dir(scores)
-    // }, [])
-
-
     // TODO calculate your score with something other than a random number generator
     useEffect(() => {
         var dummyScoreCalculator = academicPreview + healthPreview + socialPreview + extracurricularsPreview;

@@ -1,5 +1,5 @@
 import React from "react";
-import { StartButton, sparkLogoBlackText, Image, NameField, FroshGroupDropdown, FishTankLink, HowToPlay } from "../index.js";
+import { StartButton, sparkLogoBlackText, Image, NameField, FroshGroupDropdown, FishTankLink, HowToPlay, sparkLogoBlackText } from "../index.js";
 
 const LandingPage = ({ startGame, setName, setFroshGroup }) => {
 
