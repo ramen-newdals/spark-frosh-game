@@ -5,7 +5,7 @@ export var PlayerStats = {
   'ClassesMissed': 0,
   'FriendExperiences': 0,
   'ClubsAttended': 0,
-  'SparkVisited': false,
+  'SparkVisited': 0,
   'PartiesAttended': 0,
   'Discipline': 'engsci',
   'SkuleSpirit': 0,
@@ -32,8 +32,6 @@ const SetUpdatePlayerStats = (arr /*of [{key,value}] pairs*/) => {
 export const AddUpdatePlayerStats = (arr) => {
   //!be careful to only use this on numeric types
   if(arr == null) return
-  console.dir('Mutators:')
-  console.dir(arr)
   for(let i = 0; i <= arr.length/2; i+=2){
     PlayerStats[arr[i]] += arr[i+1]
   }
@@ -42,10 +40,45 @@ export const AddUpdatePlayerStats = (arr) => {
   //   var mutatorIncr = kvpair[1]
   //   PlayerStats[mutatorKey]+= mutatorIncr
   // });
-  console.dir(PlayerStats)
+  // console.dir(PlayerStats)
 }
 
 export const PrintPlayerStats = () => {
-  console.log('PlayerStats')
-  console.dir(PlayerStats)
+  // console.log('PlayerStats')
+  // console.dir(PlayerStats)
+}
+
+
+export const CalculatePlayerScore=()=>{
+  var scores = {
+    academic: 0,
+    health: 0,
+    social: 0,
+    ecr: 0
+  }
+
+  //score calculation
+  scores.academic += 
+    PlayerStats.ClassesMissed * -3 
+    + PlayerStats.DaysSleptIn * -1 
+    + PlayerStats.UpperYearWisdom * 3
+ 
+  scores.health += 
+    PlayerStats.DaysSleptIn * 1 
+    + PlayerStats.Health
+  
+  scores.social += 
+    PlayerStats.PartiesAttended * 3
+    + PlayerStats.SkuleSpirit * 2
+    + PlayerStats.Social
+    + PlayerStats.FriendExperiences * 5
+
+  scores.ecr += 
+    PlayerStats.SparkVisited * 5
+    + PlayerStats.SkuleSpirit * 2
+    + PlayerStats.UpperYearWisdom 
+    + PlayerStats.ClubsAttended * 3
+    + PlayerStats.TorontoKnowledge
+
+  return scores
 }

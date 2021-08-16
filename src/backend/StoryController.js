@@ -4,9 +4,9 @@ import { GetNextTimebucket, TimeBucket } from "./TimeBuckets";
 import { InitStoryDatabase, StoryDatabase } from "./StoryDatabase";
 import { AddUpdatePlayerStats, PlayerStats } from "./PlayerStats";
 
-let currentTimeBucket = TimeBucket.START
+let currentTimeBucket = TimeBucket.FROSH_WEEK
 let timeBucketCounter = 0
-let timeBucketLength = 1
+let timeBucketLength = 4
 let currentFrame
 
 // Given one story frame and the 'PlayerStats', how do we select the next? 
@@ -29,16 +29,35 @@ export const RequestFirstStoryFrame = () => {
 }
 
 export const RequestNextStoryFrame = (choiceIndex) => {
-  alert('')
   let enteringTimeBucket = false;
   let exitingTimeBucket = false;
+  currentFrame.read = true;
 
-  if (timeBucketCounter >= timeBucketLength) {
+  var StoriesInTimeBucket = StoryDatabase.filter(s => s.timeBucket === currentTimeBucket).filter(s => s.read === false)
+  var StartingStoriesInTimeBucket
+  var EndingStoriesInTimeBucket
+  var nextStory
+
+
+  if (timeBucketCounter >= timeBucketLength || StoriesInTimeBucket.length < 1) {
     currentTimeBucket = GetNextTimebucket(currentTimeBucket)
-    timeBucketLength = Math.ceil(StoryDatabase.filter(s => s.timeBucket === currentTimeBucket).length / 2)
+    
+    //update timebucket on transition
+    StoriesInTimeBucket = StoryDatabase.filter(s => s.timeBucket === currentTimeBucket).filter(s => s.read === false)
+
+    timeBucketLength = Math.floor(StoryDatabase.filter(s => s.timeBucket === currentTimeBucket && !s.isEntryFrame && !s.isExitFrame).length / 2)
+    timeBucketLength += StoriesInTimeBucket.filter(s => s.isEntryFrame === true).filter(s => s.read === false).length + StoriesInTimeBucket.filter(s => s.isExitFrame === true).filter(s => s.read === false).length
     timeBucketCounter = 0
     enteringTimeBucket = true;
+
+    //update timebucket on transition
+    StoriesInTimeBucket = StoryDatabase.filter(s => s.timeBucket === currentTimeBucket).filter(s => s.read === false)
   }
+  
+  //set start/end stories
+  StartingStoriesInTimeBucket = StoriesInTimeBucket.filter(s => s.isEntryFrame === true).filter(s => s.read === false)
+  EndingStoriesInTimeBucket = StoriesInTimeBucket.filter(s => s.isExitFrame === true).filter(s => s.read === false)
+    
   if (timeBucketCounter === timeBucketLength - 1) {
     exitingTimeBucket = true;
   }
@@ -50,25 +69,19 @@ export const RequestNextStoryFrame = (choiceIndex) => {
   //next story selector
   //TODO select random in timebucket, rather than in order
 
-
-  var StoriesInTimeBucket = StoryDatabase.filter(s => s.timeBucket === currentTimeBucket).filter(s => s.read === false)
-  var StartingStoriesInTimeBucket = StoriesInTimeBucket.filter(s => s.isEntryFrame === true)
-  var nextStory
-
-  //flip condition
-
-  if ((!enteringTimeBucket && !exitingTimeBucket) || StartingStoriesInTimeBucket.length === 0) {
-    nextStory = RandomInArray(StoriesInTimeBucket)
+  if(exitingTimeBucket && EndingStoriesInTimeBucket.length > 0){
+    nextStory = RandomInArray(EndingStoriesInTimeBucket)
   }
-  else if (exitingTimeBucket) {
-
-  }
-  else {
+  else if (enteringTimeBucket && StartingStoriesInTimeBucket.length > 0){
     nextStory = RandomInArray(StartingStoriesInTimeBucket)
   }
+  else{
+    nextStory = RandomInArray(StoriesInTimeBucket.filter(s => !s.isEntryFrame && !s.isExitFrame))
+  }
+
   timeBucketCounter += 1
-  console.dir("sending next timebucket")
-  console.dir(nextStory)
+  // console.dir("sending next timebucket")
+  // console.dir(nextStory)
   currentFrame = nextStory
   return nextStory;
 }

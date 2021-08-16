@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { CalculatePlayerScore } from "../backend/PlayerStats.js";
 
 import { shark, Image } from "../index.js";
 
@@ -13,6 +14,18 @@ const FishPreviewSliders = () => {
     // TODO display something other than sharks
     const [dummyScore, setDummyScore] = useState(200);
     const dummyFishTypes = ["Grandpa Shark", "Grandma Shark", "Daddy Shark", "Mommy Shark", "Baby Shark"];
+
+    // Initialize score previews
+    useEffect(()=>{
+        let scores = CalculatePlayerScore()
+
+        setAcademicPreview(scores.academic)
+        setHealthPreview(scores.health)
+        setSocialPreview(scores.social)
+        setExtracurricularsPreview(scores.ecr)
+        console.log("SCORES")   
+        console.dir(scores)
+    }, [])
 
     // TODO calculate your score with something other than a random number generator
     useEffect(() => {
