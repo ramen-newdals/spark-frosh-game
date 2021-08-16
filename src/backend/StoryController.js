@@ -89,3 +89,6 @@ export const RequestNextStoryFrame = (choiceIndex) => {
 const RandomInArray = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)]
 }
+export const GetGameProgress = () =>{
+  return (currentTimeBucket + timeBucketCounter/timeBucketLength)/TimeBucketArray.length
+}
