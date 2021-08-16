@@ -24,7 +24,7 @@ const FishPreviewSliders = () => {
     }, [academicPreview, healthPreview, socialPreview, extracurricularsPreview])
 
     return (
-        <div class="card mt-6">
+        <div class="card">
             <div class="card-header">
                 <div class="card-header-title menu-label is-light is-warning">
                     Adjust the sliders to see what kinds of sea life you could get!
