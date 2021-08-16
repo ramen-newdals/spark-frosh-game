@@ -6,7 +6,16 @@ export const TimeBucket = {
   'FALL_MIDTERMS': 4,
 }
 
+
+export const TimeBucketArray = [
+  TimeBucket.START,
+  TimeBucket.FROSH_WEEK,
+  TimeBucket.CLUB_FAIR,
+  TimeBucket.HALLOWEEN,
+  TimeBucket.FALL_MIDTERMS
+]
+
+
 export const GetNextTimebucket = (currentTimebucket) => {
-  return TimeBucket.FROSH_WEEK
-  //return TimeBucket{currentTimebucket+1}
+  return TimeBucketArray[currentTimebucket + 1]
 }
