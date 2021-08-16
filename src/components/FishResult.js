@@ -6,9 +6,9 @@ const FishResult = () => {
 
     // TODO get real results
     return (
-        <div class="card mb-6">
-            <div class="card-content columns is-centered">
-                <div class="column is-narrow">
+        <div class="card mb-6 is-centered">
+            <div class="card-content columns">
+                <div class="column is-half">
                 <p>(Insert Matt's</p>
                 <p>score bars here)</p>
                 </div>

@@ -19,7 +19,8 @@ const FishTankLink = () => {
         <p>
           {/* <Image class="is-64x64" imgLink={brokenImage}/> */}
           ...
-          (image preview goes here)
+          (image preview goes here...
+          this image should be square)
           ...
         </p>
         <br/>
