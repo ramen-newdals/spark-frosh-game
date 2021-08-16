@@ -13,7 +13,7 @@ const StoryPage = ({name}) => {
   const [storyOutcomes, setStoryOutcomes] = useState([]);
   const [storyOutcome, setStoryOutcome] = useState("");
 
-  const [showPrompt, setShowPrompt] = useState(true);
+  const [showPrompt,  setShowPrompt] = useState(true);
   const [showChoices, setShowChoices] = useState(true);
   
   //initializer
