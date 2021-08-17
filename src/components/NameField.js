@@ -9,7 +9,7 @@ const NameField = ({setValue, value}) => {
         class="input" 
         type="text" 
         placeholder="Enter your name"
-        value={value}
+        // value={value}
         onInput={e => setValue(e.target.value)}
       />
     </>
