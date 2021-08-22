@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from "react";
 import { RequestFirstStoryFrame, RequestNextStoryFrame } from "../backend/StoryController.js";
-import { Image, StoryChoice, StoryPrompt } from "../index.js";
+import { Image, StoryChoice, StoryPrompt, progressBar} from "../index.js";
 function format () {
   return Array.prototype.slice.call(arguments).join(' ')
 }
@@ -69,7 +69,24 @@ const StoryPage = ({name}) => {
        />)
         : null }
         </ul>
+		
         </div>
+		
+				<div class="column is-2">
+			
+		
+			<p>Academics</p>
+			<progress class="progress is-primary" value="15" max="100">15%</progress>
+			<p>Social</p>
+			<progress class="progress is-link" value="30" max="100">30%</progress>
+			<p>Extra-curricular</p>
+			<progress class="progress is-warning" value="75" max="100">75%</progress>
+			<p>Health</p>
+			<progress class="progress is-danger" value="90" max="100">90%</progress>
+			
+			
+			</div>
+		
       </div>
   );
 };

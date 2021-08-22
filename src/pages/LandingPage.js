@@ -1,11 +1,12 @@
 import React from "react";
-import { StartButton, sparkLogoBlackText, Image, NameField, FroshGroupDropdown, FishTankLink, HowToPlay } from "../index.js";
+import { StartButton, sparkLogoBlackText, Image, NameField, FroshGroupDropdown, FishTankLink, HowToPlay, progressBar } from "../index.js";
 
 const LandingPage = ({ startGame, setName, setFroshGroup }) => {
 
   return (
     <div class='columns is-desktop'>
       <div class="column is-one-quarter menu m-5">
+	  <progressBar />
         <HowToPlay />
       </div>
       <div class="column m-6 is-one-third block has-text-centered" id="storyTextBox">
