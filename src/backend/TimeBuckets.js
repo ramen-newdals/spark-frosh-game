@@ -1,18 +1,18 @@
 export const TimeBucket = {
   'START': 0,
-  'FROSH_WEEK': 0,
-  'CLUB_FAIR': 0,
-  'FALL_SEMESTER': 0,
-  'HALLOWEEN': 0,
-  'FALL_EXAMS': 0,
-  'WINTER_BREAK': 0,
-  'GODIVA_WEEK':0,
-  'WINTER_SEMESTER':0,
-  'WINTER_READING_WEEK':0,
-  'WINTER_EXAMS':0,
-  'FALL_READING_WEEK':0,
-  'THANKSGIVING':0,
-  'END':0
+  'FROSH_WEEK': 1,
+  'CLUB_FAIR': 2,
+  'THANKSGIVING': 3,
+  'HALLOWEEN': 4,
+  'FALL_SEMESTER':5,
+  'FALL_READING_WEEK': 6,
+  'FALL_EXAMS': 7,
+  'WINTER_BREAK': 8,
+  'GODIVA_WEEK': 9,
+  'WINTER_SEMESTER': 10,
+  'WINTER_READING_WEEK': 11,
+  'WINTER_EXAMS': 12,
+  'END': 13
 }
 
 
@@ -35,5 +35,8 @@ export const TimeBucketArray = [
 
 
 export const GetNextTimebucket = (currentTimebucket) => {
+  let nextTimebucket = TimeBucketArray[TimeBucketArray.indexOf(currentTimebucket) + 1]
+  alert("next timebucket " + nextTimebucket)
   return TimeBucketArray[currentTimebucket + 1]
 }
+

@@ -12,11 +12,17 @@ export var StoryDatabase = [
   new StoryFrame("The club fair is being held in Bahen this year. The first two floors are floor are packed (within reason) with clubs and design teams looking to recruit new memebers.", ["Visit the Spark Design Club booth!", "Look at the other design clubs", "...is there a cabbage team?"], ['Promotional material', 'You feel like some other clubs might be interesting to look at, but you\'re eventually drawn back towards the Spark Booth.', 'Yes, but Spark is _definitely_ more interesting than a cabbage club.'], [], 'https://picsum.photos/200/300', [], TimeBucket.CLUB_FAIR, true),
   new StoryFrame("An old display stands to the left of the Spark Design Club booth. It's an assembly of flashing lights and whirring motors, with a small crowd taking turns to play.", ["Go up to the booth.", "Talk to the Spark leads."], ['You fiddle with the buttons, and you notice you\'re controlling a mechanized pong arcade machine. They tell you that the display took a few months to design, with a variety of students from all disciplines and years. "Join us at our next build day! It\'s where we build these displays all at once." they say, inviting you. (Join our mailing list to be notified!)', 'They tell you that the display took a few months to design, with a variety of students from all disciplines and years. "Join us at our next build day! It\'s where we build these displays all at once." they say, inviting you. (Join our mailing list to be notified!)'], [], 'https://picsum.photos/200/300', [['SparkVisited', +2], ['SparkVisited', +1]], TimeBucket.CLUB_FAIR, false, true),
 
-  new StoryFrame("Halloween's coming up! You could use a break from studying.", ["Still, you have a midterm soon. Go to the library.", "Head to a party!", "Watch a game at Varsity stadium."], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.HALLOWEEN, true),
-  new StoryFrame("Halloween event 1", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.HALLOWEEN),
-  new StoryFrame("Halloween event 2", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.HALLOWEEN),
-  new StoryFrame("Halloween event 3", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.HALLOWEEN),
+  new StoryFrame("Thanksgiving placeholder", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.THANKSGIVING),
 
+  new StoryFrame("Halloween's coming up! You could use a break from studying.", ["Still, you have a midterm soon. Go to the library.", "Head to a party!", "Watch a game at Varsity stadium."], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.HALLOWEEN, true),
+
+  new StoryFrame("HALLOWEEN placeholder 1", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.HALLOWEEN),
+
+  new StoryFrame("Fall FALL_SEMESTER placeholder", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.FALL_SEMESTER),
+
+  new StoryFrame("FALL_READING_WEEK placeholder", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.FALL_READING_WEEK),
+
+  new StoryFrame("FALL_EXAMS placeholder -- NO MORE STORIES AFTER THIS SO FAR", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.FALL_EXAMS),
 
 ]
 
