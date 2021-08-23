@@ -6,7 +6,7 @@ import { AddUpdatePlayerStats, PlayerStats } from "./PlayerStats";
 
 let currentTimeBucket = TimeBucket.FROSH_WEEK
 let timeBucketCounter = 0
-let timeBucketLength = 4
+let timeBucketLength = 3
 let currentFrame
 
 // Given one story frame and the 'PlayerStats', how do we select the next? 
