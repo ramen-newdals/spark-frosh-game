@@ -39,4 +39,3 @@ export const GetNextTimebucket = (currentTimebucket) => {
   alert("next timebucket " + nextTimebucket)
   return TimeBucketArray[currentTimebucket + 1]
 }
-

@@ -41,7 +41,7 @@ export const RequestNextStoryFrame = (choiceIndex) => {
 
   if (timeBucketCounter >= timeBucketLength || StoriesInTimeBucket.length < 1) {
     currentTimeBucket = GetNextTimebucket(currentTimeBucket)
-    
+
     //update timebucket on transition
     StoriesInTimeBucket = StoryDatabase.filter(s => s.timeBucket === currentTimeBucket).filter(s => s.read === false)
 
@@ -53,11 +53,11 @@ export const RequestNextStoryFrame = (choiceIndex) => {
     //update timebucket on transition
     StoriesInTimeBucket = StoryDatabase.filter(s => s.timeBucket === currentTimeBucket).filter(s => s.read === false)
   }
-  
+
   //set start/end stories
   StartingStoriesInTimeBucket = StoriesInTimeBucket.filter(s => s.isEntryFrame === true).filter(s => s.read === false)
   EndingStoriesInTimeBucket = StoriesInTimeBucket.filter(s => s.isExitFrame === true).filter(s => s.read === false)
-    
+
   if (timeBucketCounter === timeBucketLength - 1) {
     exitingTimeBucket = true;
   }
@@ -69,13 +69,13 @@ export const RequestNextStoryFrame = (choiceIndex) => {
   //next story selector
   //TODO select random in timebucket, rather than in order
 
-  if(exitingTimeBucket && EndingStoriesInTimeBucket.length > 0){
+  if (exitingTimeBucket && EndingStoriesInTimeBucket.length > 0) {
     nextStory = RandomInArray(EndingStoriesInTimeBucket)
   }
-  else if (enteringTimeBucket && StartingStoriesInTimeBucket.length > 0){
+  else if (enteringTimeBucket && StartingStoriesInTimeBucket.length > 0) {
     nextStory = RandomInArray(StartingStoriesInTimeBucket)
   }
-  else{
+  else {
     nextStory = RandomInArray(StoriesInTimeBucket.filter(s => !s.isEntryFrame && !s.isExitFrame))
   }
 
@@ -88,4 +88,7 @@ export const RequestNextStoryFrame = (choiceIndex) => {
 
 const RandomInArray = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)]
+}
+export const GetGameProgress = () => {
+  //return  (currentTimeBucket + timeBucketCounter / timeBucketLength) / TimeBucketArray.length
 }
