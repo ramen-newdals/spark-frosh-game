@@ -12,7 +12,8 @@ export const TimeBucket = {
   'WINTER_SEMESTER': 10,
   'WINTER_READING_WEEK': 11,
   'WINTER_EXAMS': 12,
-  'END': 13
+  'SUMMER_BREAK': 13,
+  'END': 14
 }
 
 
@@ -30,6 +31,7 @@ export const TimeBucketArray = [
   TimeBucket.WINTER_SEMESTER,
   TimeBucket.WINTER_READING_WEEK,
   TimeBucket.WINTER_EXAMS,
+  TimeBucket.SUMMER_BREAK,
   TimeBucket.END
 ]
 

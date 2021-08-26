@@ -18,11 +18,16 @@ export var StoryDatabase = [
 
   new StoryFrame("HALLOWEEN placeholder 1", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.HALLOWEEN),
 
-  new StoryFrame("Fall FALL_SEMESTER placeholder", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.FALL_SEMESTER),
+  new StoryFrame("FALL_SEMESTER placeholder", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.FALL_SEMESTER),
 
   new StoryFrame("FALL_READING_WEEK placeholder", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.FALL_READING_WEEK),
 
   new StoryFrame("FALL_EXAMS placeholder -- NO MORE STORIES AFTER THIS SO FAR", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.FALL_EXAMS),
+
+  new StoryFrame("WINTER_BREAK placeholder -- NO MORE STORIES AFTER THIS SO FAR", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], 'https://picsum.photos/200/300', [], TimeBucket.WINTER_BREAK),
+
+  new StoryFrame("PROMPT TEXT", ["Choice 1", "Choice 2", "Choice 3"], ['Outcome 1', 'Outcome 2', 'Outcome 3'], [], '', [], TimeBucket.WINTER_BREAK),
+
 
 ]
 
