@@ -1,6 +1,6 @@
 import React from "react";
 import { FishTankLink, PlayAgainButton, FishPreviewSliders, FishResult } from "../index.js";
-import { InitAWSLink } from "../backend/AWSLink.js";
+import {InitFirestore} from '../backend/FirebaseLink.js'
 const EndingPage = ({ name, froshGroup, fishType, restartGame }) => {
   return (
     <div class='columns is-centered is-moblie'>
@@ -17,7 +17,7 @@ const EndingPage = ({ name, froshGroup, fishType, restartGame }) => {
             <FishPreviewSliders />
           </div>
         </div>
-        <button onClick={() => InitAWSLink()} > do aws stuff </button>
+        <button onClick={() => InitFirestore(froshGroup, fishType)} > do aws stuff </button>
         <PlayAgainButton restartGame={restartGame} />
       </div >
     </div >

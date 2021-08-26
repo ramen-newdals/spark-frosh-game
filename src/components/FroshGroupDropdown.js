@@ -2,28 +2,7 @@ import React from "react";
 
 const FroshGroupDropdown = ({ setValue, value }) => {
 
-  const froshGroups = [
-    "Alpha",
-    "Beta",
-    "Gamma",
-    "Delta",
-    "Zeta",
-    "Theta",
-    "Iota",
-    "Kappa",
-    "Lambda",
-    "Nu/Ni",
-    "Omicron",
-    "Pi",
-    "Rho",
-    "Sigma",
-    "Tau",
-    "Upsilon",
-    "Phi",
-    "Chi",
-    "Psi",
-    "Omega"
-  ];
+
 
   return (
     <>
@@ -42,3 +21,26 @@ const FroshGroupDropdown = ({ setValue, value }) => {
 };
 
 export default FroshGroupDropdown;
+
+export const froshGroups = [
+  "Alpha",
+  "Beta",
+  "Gamma",
+  "Delta",
+  "Zeta",
+  "Theta",
+  "Iota",
+  "Kappa",
+  "Lambda",
+  "Nu/Ni",
+  "Omicron",
+  "Pi",
+  "Rho",
+  "Sigma",
+  "Tau",
+  "Upsilon",
+  "Phi",
+  "Chi",
+  "Psi",
+  "Omega"
+];
