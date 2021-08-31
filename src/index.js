@@ -41,6 +41,7 @@ import bettafish from "./images/bettaFish.png";
 import pufferfish from "./images/pufferFish.png";
 import unicornfish from "./images/unicornFish.png";
 import clownfish from "./images/clownfish.png";
+import boidPreview from "./images/boidPreview.png";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -72,6 +73,7 @@ export {
   StoryFrame,
   brokenImage,
   bettafish,
+  boidPreview,
   clownfish,
   pufferfish,
   unicornfish,
