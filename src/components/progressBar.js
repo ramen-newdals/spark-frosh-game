@@ -1,6 +1,6 @@
 import React from "react";
 
-const progressBar = () => {
+const ProgressBar = () => {
   
     return (
 
@@ -25,4 +25,4 @@ const progressBar = () => {
     );
   };
   
-  export default progressBar;
+  export default ProgressBar;
