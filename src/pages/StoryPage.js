@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { RequestFirstStoryFrame, RequestNextStoryFrame } from "../backend/StoryController.js";
-<<<<<<< HEAD
+
 import AnimatedImage from "../components/AnimatedImage.js";
 import { Image, StoryChoice, StoryPrompt, progressBar} from "../index.js";
 function format () {
@@ -76,7 +76,6 @@ const StoryPage = ({ name }) => {
             />)
             : null}
         </ul>
-<<<<<<< HEAD
 		
         </div>
 		
@@ -95,10 +94,9 @@ const StoryPage = ({ name }) => {
 			
 			</div>
 		
-=======
->>>>>>> 65fdda35bda2784d06f045f5f4510460526d7524
+
       </div>
-    </div>
+    
   );
 };
 
