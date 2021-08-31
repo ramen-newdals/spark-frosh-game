@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from "react";
 
-import { bettafish, pufferfish, unicornfish, clownfish, Image } from "../index.js";
+import { Image } from "../index.js";
 
 // lets people see the 'answers' to the game
 // if they move the sliders, they can see the different fish
 // you could win based on your score
-const FishPreviewSliders = () => {
+const FishPreviewSliders = ({fishTypes, fishImages}) => {
 
     const [academicPreview, setAcademicPreview] = useState(50);
     const [healthPreview, setHealthPreview] = useState(50);
     const [socialPreview, setSocialPreview] = useState(50);
     const [extracurricularsPreview, setExtracurricularsPreview] = useState(50);
-    const [fishName, setFishName] = useState("");
     const [fishIdx, setFishIdx] = useState(0);
-
-    const fishTypes = ["Betta fish", "Pufferfish", "Clownfish", "Unicorn fish"];
-    const fishImages = [bettafish, pufferfish, clownfish, unicornfish];
     
     useEffect(() => {
         var categories = [academicPreview, healthPreview, socialPreview, extracurricularsPreview];
          setFishIdx(categories.indexOf(Math.max(...categories)));
 
-        setFishName(fishTypes[fishIdx]);
     }, [academicPreview, healthPreview, socialPreview, extracurricularsPreview])
 
     return (
