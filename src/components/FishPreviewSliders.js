@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { CalculatePlayerScore } from "../backend/PlayerStats.js";
 
-import { shark, Image } from "../index.js";
+import { bettafish, pufferfish, unicornfish, clownfish, Image } from "../index.js";
 
 // lets people see the 'answers' to the game
 // if they move the sliders, they can see the different fish
@@ -13,18 +12,16 @@ const FishPreviewSliders = () => {
     const [socialPreview, setSocialPreview] = useState(50);
     const [extracurricularsPreview, setExtracurricularsPreview] = useState(50);
     const [fishName, setFishName] = useState("");
+    const [fishIdx, setFishIdx] = useState(0);
 
-    // TODO display something other than sharks
-    const [dummyScore, setDummyScore] = useState(200);
-    const dummyFishTypes = ["Grandpa Shark", "Grandma Shark", "Daddy Shark", "Mommy Shark", "Baby Shark"];
-
-    // TODO calculate your score with something other than a random number generator
+    const fishTypes = ["Betta fish", "Pufferfish", "Clownfish", "Unicorn fish"];
+    const fishImages = [bettafish, pufferfish, clownfish, unicornfish];
+    
     useEffect(() => {
-        var dummyScoreCalculator = academicPreview + healthPreview + socialPreview + extracurricularsPreview;
-        setDummyScore(dummyScoreCalculator);
-        var dummyFishName = dummyFishTypes[Math.floor(Math.random() * dummyFishTypes.length)]
+        var categories = [academicPreview, healthPreview, socialPreview, extracurricularsPreview];
+         setFishIdx(categories.indexOf(Math.max(...categories)));
 
-        setFishName(dummyFishName);
+        setFishName(fishTypes[fishIdx]);
     }, [academicPreview, healthPreview, socialPreview, extracurricularsPreview])
 
     return (
@@ -45,10 +42,10 @@ const FishPreviewSliders = () => {
                     <p class="is-size-6 ml-4">Extracurriculars</p>
                     <input class="slider is-small is-circle ml-4" defaultValue={extracurricularsPreview} onMouseUp={e => setExtracurricularsPreview(parseInt(e.target.value))} step="1" min="0" max="100" type="range"></input>
                 </div>
-                <div class="column is-narrow">
-                    <Image imgLink={shark} />
-                    <p class="is-size-4 is-spark-font">{fishName}</p>
-                    <p class="m-3 is-size-7">Doo doo doo doo doo doo</p>
+                <div class="column is-one-third">
+                    <Image imgLink={fishImages[fishIdx]} />
+                    <p class="is-size-4 is-spark-font">{fishTypes[fishIdx]}</p>
+                    {/* <p class="m-3 is-size-7">fishPun[fishIdx]</p> */}
                 </div>
             </div>
         </div>

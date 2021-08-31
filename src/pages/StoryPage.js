@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { RequestFirstStoryFrame, RequestNextStoryFrame } from "../backend/StoryController.js";
-
 import AnimatedImage from "../components/AnimatedImage.js";
 import { Image, StoryChoice, StoryPrompt, progressBar} from "../index.js";
 function format () {
