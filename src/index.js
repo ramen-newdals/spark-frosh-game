@@ -22,6 +22,7 @@ import StoryChoice from "./components/StoryChoice";
 import StoryPrompt from "./components/StoryPrompt";
 import StartButton from "./components/StartButton";
 import Subscribe from './components/Subscribe';
+import progressBar from './components/progressBar';
 
 //pages
 import EndingPage from "./pages/EndingPage";
@@ -69,6 +70,7 @@ export {
   brokenImage,
   shark,
   sparkLogoSmall,
-  sparkLogoBlackText
+  sparkLogoBlackText,
+  progressBar
 };
 
