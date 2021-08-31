@@ -13,8 +13,8 @@ const App = () => {
   const [showLandingPage, setShowLandingPage] = useState(true);
   const [showStoryPage, setShowStoryPage] = useState(false);
   const [showEndingPage, setShowEndingPage] = useState(false);
-  const [name, setName] = useState("<name>");
-  const [froshGroup, setFroshGroup] = useState("<groupName>");
+  const [name, setName] = useState("");
+  const [froshGroup, setFroshGroup] = useState("");
 
   const startGame = () => {
     setShowLandingPage(false);
@@ -32,12 +32,12 @@ const App = () => {
     setShowLandingPage(true);
     setShowEndingPage(false);
     setShowStoryPage(false);
-    setName("<name>");
-    setFroshGroup("<groupName>");
+    setName("");
+    setFroshGroup("");
   }
 
   //TODO: define scoring system, includng fish type
-  const insertFishTypeHere = "<fish>";
+  const insertFishTypeHere = "fish";
 
   return (
     <>
@@ -48,6 +48,8 @@ const App = () => {
             startGame={startGame}
             setName={setName}
             setFroshGroup={setFroshGroup}
+            name={name}
+            froshGroup={froshGroup}
           /> : null}
 
         {showStoryPage ? <StoryPage name={name} /> : null}

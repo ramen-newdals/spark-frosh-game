@@ -37,7 +37,10 @@ import StoryFrame from "./backend/StoryFrame";
 import brokenImage from "./images/broken-image.png";
 import sparkLogoSmall from "./images/SparkLogoSmall.png";
 import sparkLogoBlackText from "./images/SparkLogoBlackText.png";
-import shark from "./images/demoShark.png";
+import bettafish from "./images/bettaFish.png";
+import pufferfish from "./images/pufferFish.png";
+import unicornfish from "./images/unicornFish.png";
+import clownfish from "./images/clownfish.png";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -68,7 +71,10 @@ export {
   Subscribe,
   StoryFrame,
   brokenImage,
-  shark,
+  bettafish,
+  clownfish,
+  pufferfish,
+  unicornfish,
   sparkLogoSmall,
   sparkLogoBlackText,
   ProgressBar
