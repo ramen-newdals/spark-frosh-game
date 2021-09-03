@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FishTankLink, PlayAgainButton, FishPreviewSliders, FishResult } from "../index.js";
 import {InitFirestore} from '../backend/FirebaseLink.js'
 const EndingPage = ({ name, froshGroup, fishType, restartGame }) => {
+
+  useEffect(()=> {
+    
+  }, [])
+
   return (
     <div class='columns is-centered is-moblie'>
       <div class="column m-5 is-three-quarters block has-text-centered">
