@@ -22,6 +22,7 @@ import StoryChoice from "./components/StoryChoice";
 import StoryPrompt from "./components/StoryPrompt";
 import StartButton from "./components/StartButton";
 import Subscribe from './components/Subscribe';
+import ProgressBar from './components/progressBar';
 
 //pages
 import EndingPage from "./pages/EndingPage";
@@ -36,7 +37,11 @@ import StoryFrame from "./backend/StoryFrame";
 import brokenImage from "./images/broken-image.png";
 import sparkLogoSmall from "./images/SparkLogoSmall.png";
 import sparkLogoBlackText from "./images/SparkLogoBlackText.png";
-import shark from "./images/demoShark.png";
+import bettafish from "./images/bettaFish.png";
+import pufferfish from "./images/pufferFish.png";
+import unicornfish from "./images/unicornFish.png";
+import clownfish from "./images/clownfish.png";
+import boidPreview from "./images/boidPreview.png";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -67,8 +72,13 @@ export {
   Subscribe,
   StoryFrame,
   brokenImage,
-  shark,
+  bettafish,
+  boidPreview,
+  clownfish,
+  pufferfish,
+  unicornfish,
   sparkLogoSmall,
-  sparkLogoBlackText
+  sparkLogoBlackText,
+  ProgressBar
 };
 

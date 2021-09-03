@@ -5,7 +5,7 @@ const Image = (props) => {
 
   return (
     <figure class="is-inline-block has-text-centered" >
-      <img class="m-4" alt="story prompt reference" src={props.imgLink} />
+      <img class="m-1" alt="story prompt reference" src={props.imgLink} />
     </figure>
   );
 };
