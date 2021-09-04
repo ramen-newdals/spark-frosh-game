@@ -100,7 +100,7 @@ const StoryPage = ({ name, endGame }) => {
 		
         </div>
 		
-				<div class="column is-2">
+				<div class="column is-2 m-3 mt-5">
 			
 		
 			<p>Academics</p>
