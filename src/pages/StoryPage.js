@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
+import { CalculatePlayerScore } from "../backend/PlayerStats.js";
 import { RequestFirstStoryFrame, RequestNextStoryFrame } from "../backend/StoryController.js";
 import AnimatedImage from "../components/AnimatedImage.js";
 import { Image, StoryChoice, StoryPrompt, ProgressBar} from "../index.js";
+import '../animated.css'
+
 function format () {
   return Array.prototype.slice.call(arguments).join(' ')
 }
@@ -82,13 +85,13 @@ const StoryPage = ({ name }) => {
 			
 		
 			<p>Academics</p>
-			<progress class="progress is-primary" value="15" max="100">15%</progress>
+			<progress class="progress is-primary" value={CalculatePlayerScore().academic} max="100">15%</progress>
 			<p>Social</p>
-			<progress class="progress is-link" value="30" max="100">30%</progress>
+			<progress class="progress is-link" value={CalculatePlayerScore().social} max="100">30%</progress>
 			<p>Extra-curricular</p>
-			<progress class="progress is-warning" value="75" max="100">75%</progress>
+			<progress class="progress is-warning" value={CalculatePlayerScore().ecr} max="100">75%</progress>
 			<p>Health</p>
-			<progress class="progress is-danger" value="90" max="100">90%</progress>
+			<progress class="progress is-danger" value={CalculatePlayerScore().health} max="100">90%</progress>
 			
 			
 			</div>

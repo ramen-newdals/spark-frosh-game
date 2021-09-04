@@ -12,7 +12,9 @@ export var PlayerStats = {
   'Health': 0,
   'Social': 0,
   'TorontoKnowledge': 0,
-  'UpperYearWisdom': 0
+  'UpperYearWisdom': 0,
+  'Academic': 0,
+  'Extracurricular': 0
 }
 
 export var PlayerStatsLookup
@@ -62,15 +64,16 @@ export const CalculatePlayerScore=()=>{
     PlayerStats.ClassesMissed * -3 
     + PlayerStats.DaysSleptIn * -1 
     + PlayerStats.UpperYearWisdom * 3
+    + PlayerStats.Academic * 2
  
   scores.health += 
     PlayerStats.DaysSleptIn * 1 
-    + PlayerStats.Health
+    + PlayerStats.Health * 2
   
   scores.social += 
     PlayerStats.PartiesAttended * 3
     + PlayerStats.SkuleSpirit * 2
-    + PlayerStats.Social
+    + PlayerStats.Social * 2
     + PlayerStats.FriendExperiences * 5
 
   scores.ecr += 
@@ -79,6 +82,7 @@ export const CalculatePlayerScore=()=>{
     + PlayerStats.UpperYearWisdom 
     + PlayerStats.ClubsAttended * 3
     + PlayerStats.TorontoKnowledge
+    + PlayerStats.Extracurricular * 2
 
   return scores
 }
