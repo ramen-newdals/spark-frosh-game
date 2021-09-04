@@ -4,8 +4,8 @@ const HowToPlay = () => {
 
   const info = " \
   Choose a path through your first year of UofT Engineering. \
-  Depending on your final score, you might earn your F!rosh group \
-  a fish to display on the leaderboard. The choice is yours!";
+  Depending on your final score, you might win a fish to add to your F!rosh group's \
+  school of fish. The choice is yours!";
 
   return (
     <div class="card">

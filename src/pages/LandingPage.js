@@ -25,6 +25,7 @@ const LandingPage = ({ startGame, setName, setFroshGroup, name, froshGroup }) =>
           name={name}
           froshGroup={froshGroup}
         />
+        <p class="is-size-6">(Takes about 3-5 mins)</p>
         <br />
         <p class="is-size-7 m-5">Disclaimer: Story progress may not save if you quit before finishing your adventure. All incidents portrayed in this game are ficticious and do not accurately represent real life scenarios.</p>
       </div>
