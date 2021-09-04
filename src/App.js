@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import { ResetAllScores } from './backend/PlayerStats';
+import { ResetTimeBucket } from './backend/StoryController';
 
 import {
   Header,
@@ -34,6 +36,11 @@ const App = () => {
     setShowStoryPage(false);
     setName("");
     setFroshGroup("");
+
+    ResetAllScores()
+    ResetTimeBucket()
+
+
   }
 
   //TODO: define scoring system, includng fish type

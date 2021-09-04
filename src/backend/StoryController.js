@@ -122,3 +122,6 @@ function GetPictureLinkByTimebucket() {
   }
 }
 
+export const ResetTimeBucket = () => {
+  currentTimeBucket = TimeBucket.FROSH_WEEK
+}

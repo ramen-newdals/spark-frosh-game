@@ -94,3 +94,10 @@ export const GetFinalScore = () => {
   let score = scoreObj.academic + scoreObj.ecr+ scoreObj.social + scoreObj.health
   return score
 }
+
+
+export const ResetAllScores = () => {
+  for(const prop in PlayerStats){
+    PlayerStats[prop] = 0
+  }
+}
