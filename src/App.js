@@ -52,7 +52,7 @@ const App = () => {
             froshGroup={froshGroup}
           /> : null}
 
-        {showStoryPage ? <StoryPage name={name} /> : null}
+        {showStoryPage ? <StoryPage name={name} endGame={endGame} /> : null}
 
         {showEndingPage ?
           <EndingPage

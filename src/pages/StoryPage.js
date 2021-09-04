@@ -9,7 +9,7 @@ function format () {
   return Array.prototype.slice.call(arguments).join(' ')
 }
 
-const StoryPage = ({ name }) => {
+const StoryPage = ({ name, endGame }) => {
 
   const [pictureLink, setPictureLink] = useState("");
   const [storyText, setStoryText] = useState("");
@@ -61,8 +61,8 @@ const StoryPage = ({ name }) => {
       //this is where we end the game, maybe after a small delay
 
       setTimeout(()=>{
-        alert("DONE")
-      }, 3000)
+        endGame()
+      }, 5000)
       
       return
 
