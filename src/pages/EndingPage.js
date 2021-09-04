@@ -7,7 +7,7 @@ const EndingPage = ({ name, froshGroup, restartGame }) => {
 
     const [fishIdx, setFishIdx] = useState(0);
     const [score, setScore] = useState({});
-    const fishTypes = ["betta fish", "pufferfish", "clownfish", "unicorn fish"];
+    const fishTypes = ["Betta fish", "Pufferfish", "Clownfish", "Unicorn fish"];
     const fishImages = [bettafish, pufferfish, clownfish, unicornfish];
 
     const totalScore = 1; //placeholder until james sends the weighted total score
@@ -23,7 +23,7 @@ const EndingPage = ({ name, froshGroup, restartGame }) => {
     }, [])
 
   return (
-    <div class='columns is-centered is-moblie'>
+    <div class='columns is-centered is-mobile'>
       <div class="column m-5 is-three-quarters block has-text-centered">
 		<h1 class="is-size-1 has-text-black is-spark-font">Game Over</h1>
 		<h4 class="subtitle">Congratulations, {name}.</h4>

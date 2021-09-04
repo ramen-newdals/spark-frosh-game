@@ -36,7 +36,6 @@ const App = () => {
     setFroshGroup("");
   }
 
-  //TODO: define scoring system, includng fish type
   const insertFishTypeHere = "fish";
 
   return (
