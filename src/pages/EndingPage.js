@@ -29,7 +29,7 @@ const EndingPage = ({ name, froshGroup, restartGame }) => {
 		<h4 class="subtitle">Congratulations, {name}.</h4>
 		<h4 class="subtitle">A <strong>{fishTypes[fishIdx]}</strong> has joined {froshGroup}'s school of fish!</h4>
 		<FishResult fishType={fishTypes[fishIdx]} fishImage={fishImages[fishIdx]}/>
-        <div class='columns is-centered is-moblie'>
+        <div class='columns is-centered is-mobile'>
           <div class="column">
             <FishTankLink />
           </div>
