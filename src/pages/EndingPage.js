@@ -25,10 +25,10 @@ const EndingPage = ({ name, froshGroup, restartGame }) => {
   return (
     <div class='columns is-centered is-moblie'>
       <div class="column m-5 is-three-quarters block has-text-centered">
-        <h1 class="is-size-1 has-text-black is-spark-font">Game Over</h1>
-        <h4 class="subtitle">Congratulations, {name}.</h4>
-        <h4 class="subtitle">A <strong>{fishTypes[fishIdx]}</strong> has joined {froshGroup}'s school of fish!</h4>
-        <FishResult fishType={fishTypes[fishIdx]} fishImage={fishImages[fishIdx]}/>
+		<h1 class="is-size-1 has-text-black is-spark-font">Game Over</h1>
+		<h4 class="subtitle">Congratulations, {name}.</h4>
+		<h4 class="subtitle">A <strong>{fishTypes[fishIdx]}</strong> has joined {froshGroup}'s school of fish!</h4>
+		<FishResult fishType={fishTypes[fishIdx]} fishImage={fishImages[fishIdx]}/>
         <div class='columns is-centered is-moblie'>
           <div class="column">
             <FishTankLink />

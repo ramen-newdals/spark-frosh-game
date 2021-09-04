@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { CalculatePlayerScore } from "../backend/PlayerStats.js";
+import { CalculatePlayerScore, GetFinalScore } from "../backend/PlayerStats.js";
 
 import { Image, ProgressBar } from "../index.js";
 
@@ -9,7 +9,8 @@ const FishResult = ({fishType, fishImage}) => {
         <div class="card mb-6 is-centered">
             <div class="card-content columns">
                 <div class="column is-half">
-                <ProgressBar />
+                {/*<ProgressBar />*/}
+				<progress class="progress is-primary" value={20 + GetFinalScore()} max="100">15%</progress>
                 </div>
                 <div class="column is-one-third">
                     <Image imgLink={fishImage} />
