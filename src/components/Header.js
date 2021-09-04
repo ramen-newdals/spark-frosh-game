@@ -8,7 +8,7 @@ const Header = ({endGame, restartGame}) => {
       role="navigation" 
       aria-label="main navigation"
     >
-    <a class="navbar-brand" href="https://spark.skule.ca/">
+    <a class="navbar-brand" href="https://spark.skule.ca/" target='_blank' rel='noreferrer'>
       <img src={sparkLogoSmall} alt="Spark Design Club"/>
     </a>
     <button class="button" onClick={() => endGame()}>Ending page (for debugging)</button>

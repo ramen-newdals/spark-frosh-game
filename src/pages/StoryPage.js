@@ -51,6 +51,25 @@ const StoryPage = ({ name }) => {
     }, 500);
 
     var nextStory = RequestNextStoryFrame(choiceIdx);
+
+    if(nextStory === 'DONE') {
+      setStoryText("")
+      setPictureLink("")
+      setStoryOutcomes("")
+      setStoryChoices(["end game"])
+      
+      //this is where we end the game, maybe after a small delay
+
+      setTimeout(()=>{
+        alert("DONE")
+      }, 3000)
+      
+      return
+
+
+    }
+
+
     setStoryText(nextStory.storyText);
     setStoryChoices(nextStory.storyChoices);
     setPictureLink(nextStory.pictureLink);
@@ -85,13 +104,13 @@ const StoryPage = ({ name }) => {
 			
 		
 			<p>Academics</p>
-			<progress class="progress is-primary" value={CalculatePlayerScore().academic} max="100">15%</progress>
+			<progress class="progress is-primary" value={20 + CalculatePlayerScore().academic} max="40">15%</progress>
 			<p>Social</p>
-			<progress class="progress is-link" value={CalculatePlayerScore().social} max="100">30%</progress>
+			<progress class="progress is-link" value={20 + CalculatePlayerScore().social} max="40">30%</progress>
 			<p>Extra-curricular</p>
-			<progress class="progress is-warning" value={CalculatePlayerScore().ecr} max="100">75%</progress>
+			<progress class="progress is-warning" value={20 + CalculatePlayerScore().ecr} max="40">75%</progress>
 			<p>Health</p>
-			<progress class="progress is-danger" value={CalculatePlayerScore().health} max="100">90%</progress>
+			<progress class="progress is-danger" value={20 + CalculatePlayerScore().health} max="40">90%</progress>
 			
 			
 			</div>

@@ -18,6 +18,10 @@ const EndingPage = ({ name, froshGroup, restartGame }) => {
         setFishIdx(categories.indexOf(Math.max(...categories)));
     }, [score]);
 
+    useEffect(()=>{
+      InitFirestore(froshGroup, totalScore)
+    }, [])
+
   return (
     <div class='columns is-centered is-moblie'>
       <div class="column m-5 is-three-quarters block has-text-centered">
@@ -33,7 +37,7 @@ const EndingPage = ({ name, froshGroup, restartGame }) => {
             <FishPreviewSliders fishTypes={fishTypes} fishImages={fishImages}/>
           </div>
         </div>
-        <button onClick={() => InitFirestore(froshGroup, totalScore)} > do aws stuff </button>
+        {/* <button onClick={() => InitFirestore(froshGroup, totalScore)} > do aws stuff </button> */}
         <PlayAgainButton restartGame={restartGame} />
       </div >
     </div >

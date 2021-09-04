@@ -61,9 +61,9 @@ export const CalculatePlayerScore=()=>{
 
   //score calculation
   scores.academic += 
-    PlayerStats.ClassesMissed * -3 
+    PlayerStats.ClassesMissed * -1 
     + PlayerStats.DaysSleptIn * -1 
-    + PlayerStats.UpperYearWisdom * 3
+    + PlayerStats.UpperYearWisdom * 5
     + PlayerStats.Academic * 2
  
   scores.health += 
@@ -84,5 +84,7 @@ export const CalculatePlayerScore=()=>{
     + PlayerStats.TorontoKnowledge
     + PlayerStats.Extracurricular * 2
 
+    console.log("calculated scores")
+    console.dir(scores)
   return scores
 }

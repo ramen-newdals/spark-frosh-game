@@ -4,12 +4,12 @@ const Subscribe = () => {
 
   return (
     <aside class="menu column is-one-fifth">
-      <p class="menu-label">
+      <p class="menu-label has-text-black">
         Learn about recruitment and upcoming events
       </p>
       <ul class="menu-list is-size-7 has-text-centered">
         <li>
-          <a href="https://spark.skule.ca/contact-us/">
+          <a href="https://spark.skule.ca/contact-us/" target='_blank' rel='noreferrer'>
             <span class="icon">
               <i class="fas fa-bell"></i>
             </span>

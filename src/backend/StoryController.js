@@ -29,6 +29,9 @@ export const RequestFirstStoryFrame = () => {
 }
 
 export const RequestNextStoryFrame = (choiceIndex) => {
+
+  if (currentTimeBucket == TimeBucket.END) return "DONE"
+
   let enteringTimeBucket = false;
   let exitingTimeBucket = false;
   currentFrame.read = true;
@@ -83,6 +86,7 @@ export const RequestNextStoryFrame = (choiceIndex) => {
   // console.dir("sending next timebucket")
   // console.dir(nextStory)
   currentFrame = nextStory
+  currentFrame.pictureLink = GetPictureLinkByTimebucket()
   return nextStory;
 }
 
@@ -91,4 +95,16 @@ const RandomInArray = (arr) => {
 }
 export const GetGameProgress = () => {
   //return  (currentTimeBucket + timeBucketCounter / timeBucketLength) / TimeBucketArray.length
+}
+
+function GetPictureLinkByTimebucket() {
+  switch (currentTimeBucket) {
+    case (TimeBucket.FALL_READING_WEEK):
+      return 'https://cdn.discordapp.com/attachments/844194839867949106/879512058603925595/fall_reading_week.jpg'
+      break;
+
+    default:
+      return 'https://picsum.photos/200/300'
+      break;
+  }
 }
