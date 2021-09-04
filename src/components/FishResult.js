@@ -10,7 +10,7 @@ const FishResult = ({fishType, fishImage}) => {
             <div class="card-content columns">
                 <div class="column is-half">
                 {/*<ProgressBar />*/}
-				<progress class="progress is-primary" value={20 + GetFinalScore()} max="100">15%</progress>
+				<progress class="progress is-primary" value={GetFinalScore()} max="100">15%</progress>
                 </div>
                 <div class="column is-one-third">
                     <Image imgLink={fishImage} />
