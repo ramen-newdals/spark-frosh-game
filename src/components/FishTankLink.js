@@ -49,7 +49,7 @@ const FishTankLink = () => {
         </div>
 
         <div class="card-content has-text-dark has-text-centered">
-          <p class="is-size-3 is-spark-font">leaderboard</p>
+          <p class="is-size-3 is-spark-font">LEADERBOARD</p>
           <ul class="menu-list has-text-dark is-spark-font is-size-4">
             {topFiveScores.map((froshGroup, idx) => <li>{`${idx + 1}. ${froshGroup.id}    (${froshGroup.score})`}</li>)}
           </ul>

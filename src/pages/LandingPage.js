@@ -9,7 +9,7 @@ const LandingPage = ({ startGame, setName, setFroshGroup, name, froshGroup }) =>
         <HowToPlay />
       </div>
       <div class="column m-6 is-one-third block has-text-centered" id="storyTextBox">
-        <h1 class="is-size-1 has-text-black is-spark-font">F!rosh Simulator</h1>
+        <h1 class="is-size-1 has-text-black is-spark-font">F!ROSH SIMULATOR</h1>
         <h4 class="subtitle">Choose your own adventure. Earn a F!rosh fish.</h4>
         <NameField
           setValue={setName}

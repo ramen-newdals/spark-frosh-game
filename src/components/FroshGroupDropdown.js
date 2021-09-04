@@ -32,7 +32,7 @@ export const froshGroups = [
   "Iota",
   "Kappa",
   "Lambda",
-  "Nu/Ni",
+  "Nu",
   "Omicron",
   "Pi",
   "Rho",
