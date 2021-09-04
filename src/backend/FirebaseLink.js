@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { addDoc, collection, doc, getDocs, getFirestore, increment, setDoc, updateDoc } from "firebase/firestore";
 import { froshGroups } from "../components/FroshGroupDropdown"
-
+import { CalculatePlayerScore } from "./PlayerStats";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -44,8 +44,12 @@ export const InitFirestore = async (froshGroup, fishType) => {
   //     score: increment(1),
   //     id: i
   // });
+
+  let scoreObj = CalculatePlayerScore();
+  let score = scoreObj.academic + scoreObj.ecr+ scoreObj.social + scoreObj.health
+
   await updateDoc(doc(db, 'frosh-group-scores', group), {
-    score: increment(0)
+    score: increment(score)
   })
   // console.log("Document written with ID: ", docRef.id);
   // }

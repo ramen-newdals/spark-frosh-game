@@ -30,7 +30,7 @@ export const RequestFirstStoryFrame = () => {
 
 export const RequestNextStoryFrame = (choiceIndex) => {
 
-  if (currentTimeBucket == TimeBucket.END) return "DONE"
+  if (currentTimeBucket === TimeBucket.END) return "DONE"
 
   let enteringTimeBucket = false;
   let exitingTimeBucket = false;
@@ -97,14 +97,28 @@ export const GetGameProgress = () => {
   //return  (currentTimeBucket + timeBucketCounter / timeBucketLength) / TimeBucketArray.length
 }
 
+
+
 function GetPictureLinkByTimebucket() {
   switch (currentTimeBucket) {
     case (TimeBucket.FALL_READING_WEEK):
       return 'https://cdn.discordapp.com/attachments/844194839867949106/879512058603925595/fall_reading_week.jpg'
-      break;
-
+    case (TimeBucket.CLUB_FAIR):
+      return 'https://cdn.discordapp.com/attachments/844194839867949106/879512104762236959/clubs_fair.jpg'
+    case (TimeBucket.FALL_SEMESTER):
+      return 'https://cdn.discordapp.com/attachments/844194839867949106/879512084218511370/fall_semester.jpg'
+    case (TimeBucket.FROSH_WEEK):
+      return 'https://media.discordapp.net/attachments/844194839867949106/879512125725347880/frosh_week.jpg?width=1024&height=683'
+    case (TimeBucket.HALLOWEEN):
+      return 'https://media.discordapp.net/attachments/844194839867949106/879513004578852874/halloween.jpg?width=455&height=683'
+    case (TimeBucket.THANKSGIVING):
+      return 'https://media.discordapp.net/attachments/844194839867949106/879512110214815805/thanksgiving.jpg?width=455&height=683'
+    case (TimeBucket.END):
+      return 'https://cdn.discordapp.com/attachments/844194839867949106/879512061623824476/winter_break.jpg'
+    case (TimeBucket.START):
+      return 'https://images.unsplash.com/photo-1576485976138-6c3cff620ae8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80' 
     default:
-      return 'https://picsum.photos/200/300'
-      break;
+      return 'https://images.unsplash.com/photo-1576485976138-6c3cff620ae8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
   }
 }
+
