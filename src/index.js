@@ -22,7 +22,7 @@ import StoryChoice from "./components/StoryChoice";
 import StoryPrompt from "./components/StoryPrompt";
 import StartButton from "./components/StartButton";
 import Subscribe from './components/Subscribe';
-import ProgressBar from './components/progressBar';
+import ProgressBar from './components/ProgressBar';
 
 //pages
 import EndingPage from "./pages/EndingPage";

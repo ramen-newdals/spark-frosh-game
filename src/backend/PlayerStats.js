@@ -88,3 +88,9 @@ export const CalculatePlayerScore=()=>{
     console.dir(scores)
   return scores
 }
+
+export const GetFinalScore = () => {
+  let scoreObj = CalculatePlayerScore();
+  let score = scoreObj.academic + scoreObj.ecr+ scoreObj.social + scoreObj.health
+  return score
+}
