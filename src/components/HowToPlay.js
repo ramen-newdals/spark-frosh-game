@@ -3,7 +3,7 @@ import React from "react";
 const HowToPlay = () => {
 
   const info = " \
-  Choose a path through your first year of UofT Engineering. \
+  Choose a path through your first semester of UofT Engineering. \
   Depending on your final score, you might win a fish to add to your F!rosh group's \
   school of fish. The choice is yours!";
 

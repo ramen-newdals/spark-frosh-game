@@ -56,7 +56,7 @@ const StoryPage = ({ name, endGame }) => {
       setStoryText("")
       setPictureLink("")
       setStoryOutcomes("")
-      setStoryChoices(["end game"])
+      setStoryChoices([""])
       
       //this is where we end the game, maybe after a small delay
 
